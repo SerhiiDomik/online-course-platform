@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block title %}{{ lesson.title }}{% endblock %}
+
+{% block content %}
+  <br>
+  <h2>{{ lesson.title }}</h2>
+  <br>
+  <p>{{ lesson.content }}</p>
+
+  <a href="{% url 'course:course-detail' course_pk=lesson.course.pk %}">Back to course</a>
+{% endblock %}
