@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block title %}Welcome to the Online Course Platform{% endblock %}
+
+{% block content %}
+  <div class="jumbotron">
+    <h1>Welcome to the Online Course Platform</h1>
+    <p>Learn at your own pace with our online courses!</p>
+    <p><a class="btn btn-primary btn-lg" href="{% url 'course:register' %}" role="button">Register</a></p>
+    <p><a class="btn btn-secondary btn-lg" href="{% url 'course:login' %}" role="button">Login</a></p>
+  </div>
+{% endblock %}
