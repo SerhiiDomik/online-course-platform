@@ -1,4 +1,111 @@
+/* Global styles */
 body {
-  display: flex;
-  font-family: Arial, sans-serif;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Sidebar styles */
+.sidebar {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+    width: 250px; /* Fixed width for sidebar */
+    padding-top: 3.5rem; /* Adjust according to your top navigation height */
+    background-color: #343a40; /* Sidebar background color */
+    color: #fff; /* Sidebar text color */
+    overflow-y: auto; /* Enable scrolling if content exceeds height */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Shadow */
+}
+
+/* Sidebar header */
+.sidebar-header {
+    padding: 0.5rem 1rem;
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+/* Sidebar navigation links */
+.sidebar-nav-link {
+    display: block;
+    padding: 0.5rem 1rem;
+    color: #fff;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.sidebar-nav-link:hover {
+    background-color: #495057; /* Hover background color */
+}
+
+/* Active navigation link */
+.sidebar-nav-link.active {
+    background-color: #007bff; /* Active link background color */
+}
+
+/* Main content */
+.content {
+    margin-left: 250px; /* Same as the width of the sidebar */
+    padding: 20px; /* Optional padding for content */
+}
+
+/* Cards */
+.card {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    min-width: 250px;
+    margin: 0 auto;
+}
+
+.card h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.card form {
+    display: flex;
+    flex-direction: column;
+}
+
+.card form .form-group {
+    width: 100%;
+}
+
+.card form .form-control {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.card form button {
+    width: 100%;
+    border-radius: 5px;
+}
+
+/* Page header */
+.page-header .container {
+    z-index: 1;
+    position: relative;
+}
+
+.page-header .mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 0;
+}
+
+/* Responsive container */
+.container.d-flex {
+    height: 100vh;
+}
+
+.btn {
+    margin-bottom: 0;
 }
