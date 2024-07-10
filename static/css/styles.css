@@ -12,7 +12,7 @@ body {
     bottom: 0;
     left: 0;
     z-index: 100;
-    width: 250px; /* Fixed width for sidebar */
+    width: 280px; /* Fixed width for sidebar */
     padding-top: 3.5rem; /* Adjust according to your top navigation height */
     background-color: #343a40; /* Sidebar background color */
     color: #fff; /* Sidebar text color */
@@ -47,22 +47,14 @@ body {
 
 /* Main content */
 .content {
-    margin-left: 250px; /* Same as the width of the sidebar */
-    padding: 20px; /* Optional padding for content */
+    margin-left: 300px; /* Same as the width of the sidebar */
+    margin-right: 20px;
+    margin-top: 20px;
 }
 
 /* Cards */
-.card {
-    background-color: rgba(255, 255, 255, 0.9);
-    border-radius: 15px;
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    min-width: 250px;
-    margin: 0 auto;
-}
-
 .card h2 {
-    font-size: 24px;
+    font-size: 20px;
     margin-bottom: 20px;
 }
 
@@ -89,16 +81,7 @@ body {
 .page-header .container {
     z-index: 1;
     position: relative;
-}
-
-.page-header .mask {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: 0;
+    /*diff*/
 }
 
 /* Responsive container */
@@ -108,4 +91,120 @@ body {
 
 .btn {
     margin-bottom: 0;
+    border-radius: .50rem;
+}
+
+.btn-white {
+    background-color: white;
+}
+
+/* Course List Styles */
+.search-container {
+    margin: 0 auto;
+    border: 1px solid #344767; /* Blue border */
+    border-radius: 10px; /* Rounded corners */
+    padding: 0; /* Remove padding inside the container */
+}
+
+.search-container .input-group {
+    border-radius: 10px; /* Rounded corners for the whole input group */
+    overflow: hidden; /* Ensure button and input are contained within rounded corners */
+    display: flex;
+}
+
+.search-container .form-control {
+    border: none; /* Remove default border */
+    border-radius: 0; /* Remove default border radius */
+    padding-left: 10px; /* Padding for text inside input */
+    font-size: 16px; /* Bigger text size */
+    flex: 1; /* Make the input take the remaining space */
+}
+
+.search-container .btn {
+    background-color: #344767; /* Blue color for the search button */
+    border: none; /* Remove default border */
+    color: #fff; /* White text color */
+    height: 100%; /* Make button match the input height */
+    padding: 0 20px; /* Add padding inside the button */
+    font-size: 16px; /* Make text size bigger */
+}
+
+.course-list {
+    margin: 0 auto;
+}
+
+.course-card {
+    background-color: #f8f9fa; /* Light grey background color */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for cards */
+    padding: 20px; /* Padding inside the card */
+    transition: transform 0.2s; /* Smooth transition for hover effect */
+}
+
+.course-card:hover {
+    transform: translateY(-10px); /* Lift card on hover */
+}
+
+.course-card h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.course-card p {
+    margin: 0;
+}
+
+/* Course Detail Styles */
+.detail-header {
+    padding: 20px;
+    background-color: #e9ecef;
+    border-radius: 20px;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.lesson-container {
+    padding: 20px;
+    background-color: #e9ecef;
+    border-radius: 20px;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.lesson-list {
+    list-style: none;
+    padding: 0;
+}
+
+.lesson-list li {
+    padding: 10px 20px;
+    border: 2px solid #bbb;
+    border-radius: 20px;
+    margin-bottom: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.lesson-list li a {
+    text-decoration: none;
+    color: #344767;
+}
+
+.lesson-list li:hover {
+    background-color: #dcdfe3;
+}
+
+.back-button {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 15px;
+    background-color: #344767;
+    color: #fff;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+    background-color: #2d3b53;
 }

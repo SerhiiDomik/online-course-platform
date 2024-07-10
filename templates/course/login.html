@@ -1,4 +1,7 @@
 {% extends "base.html" %}
+{% load static %}
+
+<link id="pagestyle" href="{% static 'css/material-kit.css' %}" rel="stylesheet" />
 
 {% block title %}Login{% endblock %}
 
@@ -7,7 +10,7 @@
   <span class="mask bg-gradient-dark opacity-5"></span>
   <div class="container d-flex justify-content-center align-items-center h-100">
     <div class="row justify-content-center">
-      <div class="col-md-8 col-lg-6">
+      <div class="col-md-9">
         <div class="card p-4 bg-white rounded-lg shadow-lg" style="opacity: 0.9;">
           <h2 class="text-center mb-4">Login</h2>
           <form method="post">

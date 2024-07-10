@@ -1,11 +1,23 @@
 {% extends "base.html" %}
 
 {% block content %}
-  <h1>Course List</h1>
-  <div>
+  <h2 class="text-center">Course list</h2>
+  <div class="search-container mb-4">
+    <form method="GET" action="{% url 'course:index' %}">
+      <div class="input-group">
+        <input type="text" name="q" class="form-control search-input" placeholder="Search course by title" value="{{ request.GET.q }}">
+        <div class="input-group-append">
+          <button class="btn btn-primary" type="submit">Search</button>
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="course-list">
     {% for course in courses %}
-        <h3><a href="{% url 'course:course-detail' course.pk %}">{{ course.name }}</a></h3>
-        <p>{{ course.description }}</p>
+        <div class="course-card p-3 mb-3">
+          <h3><a href="{% url 'course:course-detail' course.pk %}">{{ course.name }}</a></h3>
+          <p>{{ course.description }}</p>
+        </div>
     {% endfor %}
   </div>
 {% endblock %}
