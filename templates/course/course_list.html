@@ -3,7 +3,7 @@
 {% block content %}
   <h2 class="text-center">Course list</h2>
   <div class="search-container mb-4">
-    <form method="GET" action="{% url 'course:index' %}">
+    <form method="GET" action="{% url 'course:course-list' %}">
       <div class="input-group">
         <input type="text" name="q" class="form-control search-input" placeholder="Search course by title" value="{{ request.GET.q }}">
         <div class="input-group-append">
