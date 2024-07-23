@@ -2,11 +2,20 @@
 
 {% block title %}{{ lesson.title }}{% endblock %}
 {% block content %}
-  
+
 <div class="detail-header">
   <h3>{{ lesson.title }}</h3>
-  <p>{{ lesson.content }}</p>
+  <div class="lesson-content">
+    <p>{{ lesson.content }}</p>
+  </div>
 </div>
-  
-  <a href="{% url 'course:course-detail' course_pk=lesson.course.pk %}" class="back-button">Back to course</a>
+  {% if lesson not in user.finished_lessons.all %}
+      <form method="post">
+        {% csrf_token %}
+        <button type="submit" name="mark_completed" class="btn complete_button">Mark as Completed</button>
+      </form>
+    {% else %}
+      <p class="text-success">You have completed this lesson.</p>
+    {% endif %}
+  <a href="{% url 'course:course-detail' course_pk=lesson.course.pk %}" class="btn back-button">Back to lessons</a>
 {% endblock %}

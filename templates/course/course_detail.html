@@ -4,8 +4,14 @@
 
 {% block content %}
 <div class="detail-header">
-  <h2>{{ course.name }}</h2>
+  <h2 class="d-inline-block">{{ course.name }}</h2>
+  {% if user.is_authenticated %}
+    {% if course not in user.saved_courses.all %}
+      <a href="{% url 'course:save-course' course.pk %}?next={{ request.path }}" class="btn btn-secondary float-right">Save</a>
+    {% endif %}
+  {% endif %}
   <p>{{ course.description }}</p>
+  <p class="text-muted">Created by {{ course.created_by.username }} on {{ course.created_at|date:"F j, Y" }}</p>
 </div>
 
 <div class="lesson-container">
@@ -14,6 +20,9 @@
     {% for lesson in lessons %}
       <li>
         <a href="{% url 'course:lesson-detail' course.pk lesson.pk %}">{{ lesson.title }}</a>
+        {% if lesson in user.finished_lessons.all %}
+          <span class="badge badge-success">Completed</span>
+        {% endif %}
       </li>
     {% empty %}
       <p>No lessons yet.</p>

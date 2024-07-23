@@ -17,6 +17,7 @@
         <div class="course-card p-3 mb-3">
           <h3><a href="{% url 'course:course-detail' course.pk %}">{{ course.name }}</a></h3>
           <p>{{ course.description }}</p>
+          <p class="text-muted">created by <b>{{ course.created_by.username }}</b> on {{ course.created_at|date:"F j, Y" }}</p>
         </div>
     {% endfor %}
   </div>
