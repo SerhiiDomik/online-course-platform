@@ -1,7 +1,7 @@
 from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin
 
-from .models import User, Course, Lesson
+from .models import User, Course, Lesson, SavedCourse
 
 
 @admin.register(User)
@@ -21,3 +21,9 @@ class CourseAdmin(admin.ModelAdmin):
 class LessonAdmin(admin.ModelAdmin):
     list_display = ("title", "course")
     list_filter = ("course",)
+
+
+@admin.register(SavedCourse)
+class ExtraMaterialAdmin(admin.ModelAdmin):
+    list_display = ("user", "course")
+    list_filter = ("user",)

@@ -5205,7 +5205,7 @@ textarea.form-control.is-invalid {
 
 .badge {
   --bs-badge-padding-x: 0.9em;
-  --bs-badge-padding-y: 0.55em;
+  --bs-badge-padding-y: 0.51em;
   --bs-badge-font-size: 0.75em;
   --bs-badge-font-weight: 700;
   --bs-badge-color: #fff;
@@ -5220,6 +5220,7 @@ textarea.form-control.is-invalid {
   white-space: nowrap;
   vertical-align: baseline;
   border-radius: var(--bs-badge-border-radius, 0);
+  margin-left: 10px;
 }
 
 .badge:empty {
@@ -10102,6 +10103,7 @@ textarea.form-control.is-invalid {
 
 .text-success {
   color: #4CAF50 !important;
+  margin-left: 10px;
 }
 
 .text-info {

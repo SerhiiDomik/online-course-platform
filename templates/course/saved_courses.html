@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h2 class="text-center">Saved Courses</h2>
+  <div class="course-list">
+    {% if courses %}
+      {% for course in courses %}
+          <div class="course-card p-3 mb-3">
+            <h3 class="d-inline-block"><a href="{% url 'course:course-detail' course.pk %}">{{ course.name }}</a></h3>
+            <a href="{% url 'course:remove-saved-course' course.pk %}" class="btn btn-secondary float-right remove-button">Remove</a>
+            <p>{{ course.description }}</p>
+            <p class="text-muted">Created by {{ course.created_by.username }} on {{ course.created_at|date:"F j, Y" }}</p>
+          </div>
+      {% endfor %}
+    {% else %}
+      <p style="font-size: 1.3rem;">No saved courses yet.</p>
+      <a href="{% url 'course:course-list' %}" class="btn btn-primary">Back to all courses</a>
+    {% endif %}
+  </div>
+{% endblock %}
