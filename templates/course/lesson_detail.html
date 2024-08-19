@@ -4,18 +4,26 @@
 {% block content %}
 
 <div class="detail-header">
-  <h3>{{ lesson.title }}</h3>
+  <div class="title-and-buttons">
+    <h3>{{ lesson.title }}</h3>
+    {% if request.user == lesson.course.created_by %}
+      <div class="button-group">
+        <a href="{% url 'course:lesson-update' course_pk=lesson.course.pk lesson_pk=lesson.pk %}" class="btn btn-default">Update</a>
+        <a href="{% url 'course:lesson-delete' course_pk=lesson.course.pk lesson_pk=lesson.pk %}" class="btn btn-default">Delete</a>
+      </div>
+    {% endif %}
+  </div>
   <div class="lesson-content">
     <p>{{ lesson.content }}</p>
   </div>
 </div>
-  {% if lesson not in user.finished_lessons.all %}
-      <form method="post">
-        {% csrf_token %}
-        <button type="submit" name="mark_completed" class="btn complete_button">Mark as Completed</button>
-      </form>
-    {% else %}
-      <p class="text-success">You have completed this lesson.</p>
-    {% endif %}
-  <a href="{% url 'course:course-detail' course_pk=lesson.course.pk %}" class="btn back-button">Back to lessons</a>
+{% if lesson not in user.finished_lessons.all %}
+  <form method="post">
+    {% csrf_token %}
+    <button type="submit" name="mark_completed" class="btn complete_button">Mark as Completed</button>
+  </form>
+{% else %}
+  <p class="text-success">You have completed this lesson.</p>
+{% endif %}
+<a href="{% url 'course:course-detail' course_pk=lesson.course.pk %}" class="btn back-button">Back to lessons</a>
 {% endblock %}
