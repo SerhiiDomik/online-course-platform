@@ -24,6 +24,6 @@ class LessonAdmin(admin.ModelAdmin):
 
 
 @admin.register(SavedCourse)
-class ExtraMaterialAdmin(admin.ModelAdmin):
-    list_display = ("user", "course")
-    list_filter = ("user",)
+class SavedCourse(admin.ModelAdmin):
+    list_display = ("user", "course", "saved_at")
+    list_filter = ("saved_at",)
