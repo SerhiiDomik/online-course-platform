@@ -13,16 +13,16 @@ class User(AbstractUser):
 
 
 class Course(models.Model):
-    name = models.CharField(max_length=255)
-    description = models.TextField()
+    name = models.CharField(max_length=40, unique=True)
+    description = models.TextField(max_length=150)
     created_at = models.DateTimeField(auto_now_add=True)
     created_by = models.ForeignKey(User, on_delete=models.CASCADE, related_name="course_creator")
 
+    class Meta:
+        ordering = ("-created_at",)
+
     def __str__(self):
         return self.name
-
-    def number_of_lessons(self):
-        return self.lessons.count()
 
 
 class Lesson(models.Model):
@@ -37,6 +37,10 @@ class Lesson(models.Model):
 class SavedCourse(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE, related_name="saved_course_user")
     course = models.ForeignKey(Course, on_delete=models.CASCADE, related_name="saved_course_course")
+    saved_at = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        ordering = ("-saved_at",)
 
     def __str__(self):
         return f"{self.user.username} - {self.course.name}"

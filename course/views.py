@@ -1,26 +1,44 @@
 from django.contrib.auth import login
 from django.contrib.auth.decorators import login_required
+from django.contrib.auth.mixins import LoginRequiredMixin
+from django.http import HttpResponseForbidden
 from django.shortcuts import get_object_or_404, render, redirect
 from django.urls import reverse_lazy
-from django.views.generic import ListView, DetailView, TemplateView
+from django.views import generic
 from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth.views import LogoutView
 
-from .forms import CustomUserCreationForm
+from .forms import CustomUserCreationForm, LessonForm, CourseForm, CourseSearchForm
 from .models import Course, Lesson, User, SavedCourse
 
 
-class PosterView(TemplateView):
+class PosterView(generic.TemplateView):
     template_name = "course/poster.html"
 
 
-class CourseListView(ListView):
+class CourseListView(LoginRequiredMixin, generic.ListView):
     model = Course
+    queryset = Course.objects.all()
     template_name = "course/course_list.html"
     context_object_name = "courses"
+    paginate_by = 5
+
+    def get_context_data(self, **kwargs):
+        context = super(CourseListView, self).get_context_data(**kwargs)
+        name = self.request.GET.get("name", "")
+        context["search_form"] = CourseSearchForm(
+            initial={"name": name}
+        )
+        return context
+
+    def get_queryset(self):
+        form = CourseSearchForm(self.request.GET)
+        if form.is_valid():
+            return self.queryset.filter(name__icontains=form.cleaned_data["name"])
+        return self.queryset
 
 
-class CourseDetailView(DetailView):
+class CourseDetailView(LoginRequiredMixin, generic.DetailView):
     model = Course
     template_name = "course/course_detail.html"
     context_object_name = "course"
@@ -35,7 +53,50 @@ class CourseDetailView(DetailView):
         return get_object_or_404(Course, pk=course_pk)
 
 
-class LessonDetailView(DetailView):
+class CourseCreateView(LoginRequiredMixin, generic.CreateView):
+    form_class = CourseForm
+    template_name = "course/course_form.html"
+    success_url = reverse_lazy("course:course-list")
+
+    def get_object(self, **kwargs):
+        course_pk = self.kwargs.get("course_pk")
+        return get_object_or_404(Course, course_id=course_pk)
+
+    def form_valid(self, form):
+        form.instance.created_by = self.request.user
+        return super().form_valid(form)
+
+
+class CourseUpdateView(LoginRequiredMixin, generic.UpdateView):
+    form_class = CourseForm
+    template_name = "course/course_form.html"
+
+    def get_object(self, **kwargs):
+        course_pk = self.kwargs.get("course_pk")
+        course = get_object_or_404(Course, id=course_pk)
+        if self.request.user != course.created_by:
+            return HttpResponseForbidden("You are not allowed to edit this course.")
+        return course
+
+    def get_success_url(self):
+        course_pk = self.kwargs.get("course_pk")
+        return reverse_lazy("course:course-detail", kwargs={"course_pk": course_pk})
+
+
+class CourseDeleteView(LoginRequiredMixin, generic.DeleteView):
+    model = Course
+    template_name = "course/course_confirm_delete.html"
+    success_url = reverse_lazy("course:course-list")
+
+    def get_object(self, **kwargs):
+        course_pk = self.kwargs.get("course_pk")
+        course = get_object_or_404(Course, id=course_pk)
+        if self.request.user != course.created_by:
+            return HttpResponseForbidden("You are not allowed to edit this course.")
+        return course
+
+
+class LessonDetailView(LoginRequiredMixin, generic.DetailView):
     model = Lesson
     template_name = "course/lesson_detail.html"
     context_object_name = "lesson"
@@ -45,12 +106,6 @@ class LessonDetailView(DetailView):
         lesson_pk = self.kwargs.get("lesson_pk")
         return get_object_or_404(Lesson, pk=lesson_pk, course_id=course_pk)
 
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        lesson = self.get_object()
-        context["extra_material"] = lesson.extra_material if hasattr(lesson, "extra_material") else None
-        return context
-
     def post(self, request, *args, **kwargs):
         lesson = self.get_object()
         if 'mark_completed' in request.POST:
@@ -58,7 +113,49 @@ class LessonDetailView(DetailView):
         return redirect('course:lesson-detail', course_pk=lesson.course.pk, lesson_pk=lesson.pk)
 
 
-class RegisterView(TemplateView):
+class LessonCreateView(LoginRequiredMixin, generic.CreateView):
+    form_class = LessonForm
+    template_name = "course/lesson_form.html"
+
+    def form_valid(self, form):
+        course = get_object_or_404(Course, pk=self.kwargs.get('course_pk'))
+        form.instance.course = course
+        return super().form_valid(form)
+
+    def get_success_url(self):
+        return reverse_lazy("course:course-detail", kwargs={"course_pk": self.kwargs.get("course_pk")})
+
+
+class LessonUpdateView(LoginRequiredMixin, generic.UpdateView):
+    form_class = LessonForm
+    template_name = "course/lesson_form.html"
+
+    def get_object(self, **kwargs):
+        course_pk = self.kwargs.get("course_pk")
+        lesson_pk = self.kwargs.get("lesson_pk")
+        lesson = get_object_or_404(Lesson, pk=lesson_pk, course_id=course_pk)
+        if self.request.user != lesson.course.created_by:
+            return HttpResponseForbidden("You are not allowed to edit this lesson.")
+        return lesson
+
+    def get_success_url(self):
+        return reverse_lazy("course:course-detail", kwargs={"course_pk": self.kwargs.get("course_pk")})
+
+
+class LessonDeleteView(LoginRequiredMixin, generic.DeleteView):
+    model = Lesson
+    template_name = "course/lesson_confirm_delete.html"
+
+    def get_object(self, queryset=None):
+        course_pk = self.kwargs.get("course_pk")
+        lesson_pk = self.kwargs.get("lesson_pk")
+        return get_object_or_404(Lesson, pk=lesson_pk, course_id=course_pk)
+
+    def get_success_url(self):
+        return reverse_lazy("course:course-detail", kwargs={"course_pk": self.kwargs.get("course_pk")})
+
+
+class RegisterView(generic.TemplateView):
     template_name = "course/register.html"
 
     def get(self, request):
@@ -74,7 +171,7 @@ class RegisterView(TemplateView):
         return render(request, self.template_name, {"form": form})
 
 
-class LoginView(TemplateView):
+class LoginView(generic.TemplateView):
     template_name = "course/login.html"
 
     def get(self, request):
@@ -90,13 +187,13 @@ class LoginView(TemplateView):
         return render(request, self.template_name, {"form": form})
 
 
-class SavedCourseListView(ListView):
+class SavedCourseListView(LoginRequiredMixin, generic.ListView):
     model = Course
     template_name = "course/saved_courses.html"
-    context_object_name = "courses"
+    context_object_name = "saved_courses"
 
     def get_queryset(self):
-        return self.request.user.saved_courses.all()
+        return SavedCourse.objects.filter(user=self.request.user).order_by("-saved_at")
 
 
 @login_required
