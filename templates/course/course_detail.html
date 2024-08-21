@@ -17,7 +17,7 @@
     </div>
   </div>
   <p class="lesson-content">{{ course.description }}</p>
-  <p class="text-muted">Created by {{ course.created_by.username }} on {{ course.created_at|date:"F j, Y" }}</p>
+  <p class="text-muted">Created by <b>{{ course.created_by.username }}</b> on {{ course.created_at|date:"F j, Y" }}</p>
 </div>
 
 <div class="lesson-container">

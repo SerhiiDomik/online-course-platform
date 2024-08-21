@@ -3,7 +3,7 @@ from django.contrib.auth.models import AbstractUser
 
 
 class User(AbstractUser):
-    username = models.CharField(max_length=20, unique=True)
+    username = models.CharField(max_length=15, unique=True)
     saved_courses = models.ManyToManyField("Course", through="SavedCourse", related_name="saved_by_users", blank=True)
     finished_lessons = models.ManyToManyField("Lesson", related_name="users_finished_lessons", blank=True)
 
@@ -13,8 +13,8 @@ class User(AbstractUser):
 
 
 class Course(models.Model):
-    name = models.CharField(max_length=40, unique=True)
-    description = models.TextField(max_length=150)
+    name = models.CharField(max_length=40)
+    description = models.TextField(max_length=250)
     created_at = models.DateTimeField(auto_now_add=True)
     created_by = models.ForeignKey(User, on_delete=models.CASCADE, related_name="course_creator")
 
