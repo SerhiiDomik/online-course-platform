@@ -4,7 +4,7 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from django.http import HttpResponseForbidden
 from django.shortcuts import get_object_or_404, render, redirect
 from django.urls import reverse_lazy
-from django.views import generic
+from django.views import generic, View
 from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth.views import LogoutView
 
@@ -196,16 +196,16 @@ class SavedCourseListView(LoginRequiredMixin, generic.ListView):
         return SavedCourse.objects.filter(user=self.request.user).order_by("-saved_at")
 
 
-@login_required
-def save_course(request, course_pk):
-    course = get_object_or_404(Course, pk=course_pk)
-    SavedCourse.objects.get_or_create(user=request.user, course=course)
-    return redirect('course:course-detail', course_pk=course_pk)
+class SaveCourseView(LoginRequiredMixin, generic.View):
+    def post(self, request, *args, **kwargs):
+        course = get_object_or_404(Course, pk=kwargs['course_pk'])
+        SavedCourse.objects.get_or_create(user=request.user, course=course)
+        return redirect('course:course-detail', course_pk=course.pk)
 
 
-@login_required
-def remove_course(request, course_pk):
-    course = get_object_or_404(Course, pk=course_pk)
-    SavedCourse.objects.filter(user=request.user, course=course).delete()
-    next_url = request.GET.get('next', request.META.get('HTTP_REFERER', '/'))
-    return redirect(next_url)
+class RemoveCourseView(LoginRequiredMixin, generic.View):
+    def post(self, request, *args, **kwargs):
+        course = get_object_or_404(Course, pk=kwargs['course_pk'])
+        SavedCourse.objects.filter(user=request.user, course=course).delete()
+        next_url = request.POST.get('next', request.META.get('HTTP_REFERER', '/'))
+        return redirect(next_url)

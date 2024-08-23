@@ -11,7 +11,10 @@
               {{ saved_course.course.name }}
             </a>
           </h3>
-          <a href="{% url 'course:remove-saved-course' course_pk=saved_course.course.pk %}" class="btn btn-secondary float-right remove-button">Remove</a>
+          <form method="post" action="{% url 'course:remove-saved-course' course_pk=saved_course.course.pk %}" class="float-right">
+            {% csrf_token %}
+            <button type="submit" class="btn btn-secondary remove-button">Remove</button>
+          </form>
           <p>{{ saved_course.course.description }}</p>
           <p class="text-muted">Created by {{ saved_course.course.created_by.username }} on {{ saved_course.course.created_at|date:"F j, Y" }}</p>
         </div>
