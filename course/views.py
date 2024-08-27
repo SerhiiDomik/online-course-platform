@@ -1,15 +1,14 @@
 from django.contrib.auth import login
-from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
-from django.http import HttpResponseForbidden
+from django.core.exceptions import PermissionDenied
 from django.shortcuts import get_object_or_404, render, redirect
 from django.urls import reverse_lazy
-from django.views import generic, View
+from django.views import generic
 from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth.views import LogoutView
 
 from .forms import CustomUserCreationForm, LessonForm, CourseForm, CourseSearchForm
-from .models import Course, Lesson, User, SavedCourse
+from .models import Course, Lesson, SavedCourse
 
 
 class PosterView(generic.TemplateView):
@@ -75,7 +74,7 @@ class CourseUpdateView(LoginRequiredMixin, generic.UpdateView):
         course_pk = self.kwargs.get("course_pk")
         course = get_object_or_404(Course, id=course_pk)
         if self.request.user != course.created_by:
-            return HttpResponseForbidden("You are not allowed to edit this course.")
+            raise PermissionDenied("You are not allowed to edit this course.")
         return course
 
     def get_success_url(self):
@@ -92,7 +91,7 @@ class CourseDeleteView(LoginRequiredMixin, generic.DeleteView):
         course_pk = self.kwargs.get("course_pk")
         course = get_object_or_404(Course, id=course_pk)
         if self.request.user != course.created_by:
-            return HttpResponseForbidden("You are not allowed to edit this course.")
+            raise PermissionDenied("You are not allowed to delete this course.")
         return course
 
 
@@ -135,7 +134,7 @@ class LessonUpdateView(LoginRequiredMixin, generic.UpdateView):
         lesson_pk = self.kwargs.get("lesson_pk")
         lesson = get_object_or_404(Lesson, pk=lesson_pk, course_id=course_pk)
         if self.request.user != lesson.course.created_by:
-            return HttpResponseForbidden("You are not allowed to edit this lesson.")
+            raise PermissionDenied("You are not allowed to edit this lesson.")
         return lesson
 
     def get_success_url(self):
@@ -149,7 +148,10 @@ class LessonDeleteView(LoginRequiredMixin, generic.DeleteView):
     def get_object(self, queryset=None):
         course_pk = self.kwargs.get("course_pk")
         lesson_pk = self.kwargs.get("lesson_pk")
-        return get_object_or_404(Lesson, pk=lesson_pk, course_id=course_pk)
+        lesson = get_object_or_404(Lesson, pk=lesson_pk, course_id=course_pk)
+        if self.request.user != lesson.course.created_by:
+            raise PermissionDenied("You are not allowed to edit this lesson.")
+        return lesson
 
     def get_success_url(self):
         return reverse_lazy("course:course-detail", kwargs={"course_pk": self.kwargs.get("course_pk")})
