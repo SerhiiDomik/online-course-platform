@@ -6,7 +6,10 @@ from .models import User, Course, Lesson, SavedCourse
 
 @admin.register(User)
 class UserAdmin(admin.ModelAdmin):
-    search_fields = ("username", "email",)
+    search_fields = (
+        "username",
+        "email",
+    )
     list_filter = ("username",)
     list_display = UserAdmin.list_display + ("username",)
 

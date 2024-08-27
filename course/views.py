@@ -7,7 +7,12 @@ from django.views import generic
 from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth.views import LogoutView
 
-from .forms import CustomUserCreationForm, LessonForm, CourseForm, CourseSearchForm
+from .forms import (
+    CustomUserCreationForm,
+    LessonForm,
+    CourseForm,
+    CourseSearchForm,
+)
 from .models import Course, Lesson, SavedCourse
 
 
@@ -25,9 +30,7 @@ class CourseListView(LoginRequiredMixin, generic.ListView):
     def get_context_data(self, **kwargs):
         context = super(CourseListView, self).get_context_data(**kwargs)
         name = self.request.GET.get("name", "")
-        context["search_form"] = CourseSearchForm(
-            initial={"name": name}
-        )
+        context["search_form"] = CourseSearchForm(initial={"name": name})
         return context
 
     def get_queryset(self):
@@ -107,9 +110,11 @@ class LessonDetailView(LoginRequiredMixin, generic.DetailView):
 
     def post(self, request, *args, **kwargs):
         lesson = self.get_object()
-        if 'mark_completed' in request.POST:
+        if "mark_completed" in request.POST:
             request.user.mark_lesson_completed(lesson)
-        return redirect('course:lesson-detail', course_pk=lesson.course.pk, lesson_pk=lesson.pk)
+        return redirect(
+            "course:lesson-detail", course_pk=lesson.course.pk, lesson_pk=lesson.pk
+        )
 
 
 class LessonCreateView(LoginRequiredMixin, generic.CreateView):
@@ -117,12 +122,14 @@ class LessonCreateView(LoginRequiredMixin, generic.CreateView):
     template_name = "course/lesson_form.html"
 
     def form_valid(self, form):
-        course = get_object_or_404(Course, pk=self.kwargs.get('course_pk'))
+        course = get_object_or_404(Course, pk=self.kwargs.get("course_pk"))
         form.instance.course = course
         return super().form_valid(form)
 
     def get_success_url(self):
-        return reverse_lazy("course:course-detail", kwargs={"course_pk": self.kwargs.get("course_pk")})
+        return reverse_lazy(
+            "course:course-detail", kwargs={"course_pk": self.kwargs.get("course_pk")}
+        )
 
 
 class LessonUpdateView(LoginRequiredMixin, generic.UpdateView):
@@ -138,7 +145,9 @@ class LessonUpdateView(LoginRequiredMixin, generic.UpdateView):
         return lesson
 
     def get_success_url(self):
-        return reverse_lazy("course:course-detail", kwargs={"course_pk": self.kwargs.get("course_pk")})
+        return reverse_lazy(
+            "course:course-detail", kwargs={"course_pk": self.kwargs.get("course_pk")}
+        )
 
 
 class LessonDeleteView(LoginRequiredMixin, generic.DeleteView):
@@ -154,7 +163,9 @@ class LessonDeleteView(LoginRequiredMixin, generic.DeleteView):
         return lesson
 
     def get_success_url(self):
-        return reverse_lazy("course:course-detail", kwargs={"course_pk": self.kwargs.get("course_pk")})
+        return reverse_lazy(
+            "course:course-detail", kwargs={"course_pk": self.kwargs.get("course_pk")}
+        )
 
 
 class RegisterView(generic.TemplateView):
@@ -200,14 +211,14 @@ class SavedCourseListView(LoginRequiredMixin, generic.ListView):
 
 class SaveCourseView(LoginRequiredMixin, generic.View):
     def post(self, request, *args, **kwargs):
-        course = get_object_or_404(Course, pk=kwargs['course_pk'])
+        course = get_object_or_404(Course, pk=kwargs["course_pk"])
         SavedCourse.objects.get_or_create(user=request.user, course=course)
-        return redirect('course:course-detail', course_pk=course.pk)
+        return redirect("course:course-detail", course_pk=course.pk)
 
 
 class RemoveCourseView(LoginRequiredMixin, generic.View):
     def post(self, request, *args, **kwargs):
-        course = get_object_or_404(Course, pk=kwargs['course_pk'])
+        course = get_object_or_404(Course, pk=kwargs["course_pk"])
         SavedCourse.objects.filter(user=request.user, course=course).delete()
-        next_url = request.POST.get('next', request.META.get('HTTP_REFERER', '/'))
+        next_url = request.POST.get("next", request.META.get("HTTP_REFERER", "/"))
         return redirect(next_url)

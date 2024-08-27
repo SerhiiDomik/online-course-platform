@@ -1,4 +1,3 @@
-from django import views
 from django.urls import path
 from .views import (
     CourseDetailView,
@@ -29,42 +28,42 @@ urlpatterns = [
     path(
         "course/<int:course_pk>/update/",
         CourseUpdateView.as_view(),
-        name="course-update"
+        name="course-update",
     ),
     path(
         "course/<int:course_pk>/delete/",
         CourseDeleteView.as_view(),
-        name="course-delete"
+        name="course-delete",
     ),
-    path(
-        "course/<int:course_pk>/",
-        CourseDetailView.as_view(),
-        name="course-detail"
-    ),
+    path("course/<int:course_pk>/", CourseDetailView.as_view(), name="course-detail"),
     path(
         "course/<int:course_pk>/create-lesson/",
         LessonCreateView.as_view(),
-        name="lesson-create"
+        name="lesson-create",
     ),
     path(
         "course/<int:course_pk>/lesson/<int:lesson_pk>/",
         LessonDetailView.as_view(),
-        name="lesson-detail"
+        name="lesson-detail",
     ),
     path(
         "course/<int:course_pk>/lesson/<int:lesson_pk>/update/",
         LessonUpdateView.as_view(),
-        name="lesson-update"
+        name="lesson-update",
     ),
     path(
         "course/<int:course_pk>/lesson/<int:lesson_pk>/delete/",
         LessonDeleteView.as_view(),
-        name="lesson-delete"
+        name="lesson-delete",
     ),
     path("login/", LoginView.as_view(), name="login"),
     path("register/", RegisterView.as_view(), name="register"),
     path("logout/", LogoutView.as_view(next_page="/"), name="logout"),
     path("saved-courses/", SavedCourseListView.as_view(), name="saved-courses-list"),
     path("course/<int:course_pk>/save/", SaveCourseView.as_view(), name="save-course"),
-    path("course/<int:course_pk>/remove/", RemoveCourseView.as_view(), name="remove-saved-course"),
+    path(
+        "course/<int:course_pk>/remove/",
+        RemoveCourseView.as_view(),
+        name="remove-saved-course",
+    ),
 ]

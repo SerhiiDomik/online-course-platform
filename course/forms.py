@@ -40,5 +40,5 @@ class CourseSearchForm(forms.Form):
                 "placeholder": "Search by course name",
                 "class": "form-control search-input",
             }
-        )
+        ),
     )
