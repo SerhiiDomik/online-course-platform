@@ -31,7 +31,7 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 DEBUG = os.getenv('DEBUG', 'False') == 'True'
 
 
-ALLOWED_HOSTS = ["127.0.0.1"]
+ALLOWED_HOSTS = ["127.0.0.1", "online-course-platform.onrender.com"]
 
 
 # Application definition
@@ -99,9 +99,6 @@ DATABASES = {
     'PASSWORD': os.getenv('PGPASSWORD'),
     'HOST': os.getenv('PGHOST'),
     'PORT': os.getenv('PGPORT', 5432),
-    'OPTIONS': {
-      'sslmode': 'require',
-    },
     'DISABLE_SERVER_SIDE_CURSORS': True,
   }
 }
