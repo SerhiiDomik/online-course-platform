@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h2 class="text-center">Saved Courses</h2>
+  <div class="course-list">
+    {% if saved_courses %}
+      {% for saved_course in saved_courses %}
+        <div class="course-card p-3 mb-3">
+          <h3 class="d-inline-block">
+            <a href="{% url 'course:course-detail' course_pk=saved_course.course.pk %}">
+              {{ saved_course.course.name }}
+            </a>
+          </h3>
+          <form method="post" action="{% url 'course:remove-saved-course' course_pk=saved_course.course.pk %}" class="float-right">
+            {% csrf_token %}
+            <button type="submit" class="btn btn-secondary remove-button">Remove</button>
+          </form>
+          <p>{{ saved_course.course.description }}</p>
+          <p class="text-muted">Created by {{ saved_course.course.created_by.username }} on {{ saved_course.course.created_at|date:"F j, Y" }}</p>
+        </div>
+      {% endfor %}
+    {% else %}
+      <p style="font-size: 1.3rem;">No saved courses yet.</p>
+    {% endif %}
+    <a href="{% url 'course:course-list' %}" class="back-button">Back to all courses</a>
+  </div>
+{% endblock %}

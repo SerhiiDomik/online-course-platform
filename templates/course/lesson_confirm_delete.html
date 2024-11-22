@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% load crispy_forms_filters %}
+
+{% block content %}
+  <h2>Delete Lesson</h2>
+  <p>Are you sure?</p>
+  
+  <form action="" method="post" novalidate>
+    {% csrf_token %}
+    {{ form|crispy }}
+    <input class="btn btn-danger" type="submit" value="Yes, Delete">
+    <button type="button" class="btn btn-secondary" onclick="window.history.back();">Cancel</button>
+  </form>
+{% endblock %}

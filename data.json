@@ -1,0 +1,1370 @@
+[
+{
+    "model": "admin.logentry",
+    "pk": 1,
+    "fields": {
+        "action_time": "2024-08-21T15:26:43.175Z",
+        "user": 1,
+        "content_type": 6,
+        "object_id": "7",
+        "object_repr": "TrueGordonRamsay",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 1,
+    "fields": {
+        "name": "Can add log entry",
+        "content_type": 1,
+        "codename": "add_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 2,
+    "fields": {
+        "name": "Can change log entry",
+        "content_type": 1,
+        "codename": "change_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 3,
+    "fields": {
+        "name": "Can delete log entry",
+        "content_type": 1,
+        "codename": "delete_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 4,
+    "fields": {
+        "name": "Can view log entry",
+        "content_type": 1,
+        "codename": "view_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 5,
+    "fields": {
+        "name": "Can add permission",
+        "content_type": 2,
+        "codename": "add_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 6,
+    "fields": {
+        "name": "Can change permission",
+        "content_type": 2,
+        "codename": "change_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 7,
+    "fields": {
+        "name": "Can delete permission",
+        "content_type": 2,
+        "codename": "delete_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 8,
+    "fields": {
+        "name": "Can view permission",
+        "content_type": 2,
+        "codename": "view_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 9,
+    "fields": {
+        "name": "Can add group",
+        "content_type": 3,
+        "codename": "add_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 10,
+    "fields": {
+        "name": "Can change group",
+        "content_type": 3,
+        "codename": "change_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 11,
+    "fields": {
+        "name": "Can delete group",
+        "content_type": 3,
+        "codename": "delete_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 12,
+    "fields": {
+        "name": "Can view group",
+        "content_type": 3,
+        "codename": "view_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 13,
+    "fields": {
+        "name": "Can add content type",
+        "content_type": 4,
+        "codename": "add_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 14,
+    "fields": {
+        "name": "Can change content type",
+        "content_type": 4,
+        "codename": "change_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 15,
+    "fields": {
+        "name": "Can delete content type",
+        "content_type": 4,
+        "codename": "delete_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 16,
+    "fields": {
+        "name": "Can view content type",
+        "content_type": 4,
+        "codename": "view_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 17,
+    "fields": {
+        "name": "Can add session",
+        "content_type": 5,
+        "codename": "add_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 18,
+    "fields": {
+        "name": "Can change session",
+        "content_type": 5,
+        "codename": "change_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 19,
+    "fields": {
+        "name": "Can delete session",
+        "content_type": 5,
+        "codename": "delete_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 20,
+    "fields": {
+        "name": "Can view session",
+        "content_type": 5,
+        "codename": "view_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 21,
+    "fields": {
+        "name": "Can add user",
+        "content_type": 6,
+        "codename": "add_user"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 22,
+    "fields": {
+        "name": "Can change user",
+        "content_type": 6,
+        "codename": "change_user"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 23,
+    "fields": {
+        "name": "Can delete user",
+        "content_type": 6,
+        "codename": "delete_user"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 24,
+    "fields": {
+        "name": "Can view user",
+        "content_type": 6,
+        "codename": "view_user"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 25,
+    "fields": {
+        "name": "Can add course",
+        "content_type": 7,
+        "codename": "add_course"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 26,
+    "fields": {
+        "name": "Can change course",
+        "content_type": 7,
+        "codename": "change_course"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 27,
+    "fields": {
+        "name": "Can delete course",
+        "content_type": 7,
+        "codename": "delete_course"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 28,
+    "fields": {
+        "name": "Can view course",
+        "content_type": 7,
+        "codename": "view_course"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 29,
+    "fields": {
+        "name": "Can add saved course",
+        "content_type": 8,
+        "codename": "add_savedcourse"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 30,
+    "fields": {
+        "name": "Can change saved course",
+        "content_type": 8,
+        "codename": "change_savedcourse"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 31,
+    "fields": {
+        "name": "Can delete saved course",
+        "content_type": 8,
+        "codename": "delete_savedcourse"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 32,
+    "fields": {
+        "name": "Can view saved course",
+        "content_type": 8,
+        "codename": "view_savedcourse"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 33,
+    "fields": {
+        "name": "Can add lesson",
+        "content_type": 9,
+        "codename": "add_lesson"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 34,
+    "fields": {
+        "name": "Can change lesson",
+        "content_type": 9,
+        "codename": "change_lesson"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 35,
+    "fields": {
+        "name": "Can delete lesson",
+        "content_type": 9,
+        "codename": "delete_lesson"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 36,
+    "fields": {
+        "name": "Can view lesson",
+        "content_type": 9,
+        "codename": "view_lesson"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 1,
+    "fields": {
+        "app_label": "admin",
+        "model": "logentry"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 2,
+    "fields": {
+        "app_label": "auth",
+        "model": "permission"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 3,
+    "fields": {
+        "app_label": "auth",
+        "model": "group"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 4,
+    "fields": {
+        "app_label": "contenttypes",
+        "model": "contenttype"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 5,
+    "fields": {
+        "app_label": "sessions",
+        "model": "session"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 6,
+    "fields": {
+        "app_label": "course",
+        "model": "user"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 7,
+    "fields": {
+        "app_label": "course",
+        "model": "course"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 8,
+    "fields": {
+        "app_label": "course",
+        "model": "savedcourse"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 9,
+    "fields": {
+        "app_label": "course",
+        "model": "lesson"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "bulwtpxdtehg7vdvrvng9zave8mny7ol",
+    "fields": {
+        "session_data": ".eJxVjDsOwjAQBe_iGln-xR9Kes5g7XptHEC2FCcV4u4QKQW0b2bei0XY1hq3kZc4EzszxU6_G0J65LYDukO7dZ56W5cZ-a7wgw5-7ZSfl8P9O6gw6rc2ZKRCN3knMbtCUmRtJyHRgTZWhVQsqSJkST4bABQkgg-gZRBYrHbs_QHVZDeY:1sgSoV:SzFmhEMHmHk3sZJEAA0jDZ55_74R4pOaC8W_4dRuwZg",
+        "expire_date": "2024-09-03T17:38:35.236Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "kkvf4k86g29ykjoh5osqwjg01ycwydgx",
+    "fields": {
+        "session_data": ".eJxVjDsOwjAQBe_iGln-xR9Kes5g7XptHEC2FCcV4u4QKQW0b2bei0XY1hq3kZc4EzszxU6_G0J65LYDukO7dZ56W5cZ-a7wgw5-7ZSfl8P9O6gw6rc2ZKRCN3knMbtCUmRtJyHRgTZWhVQsqSJkST4bABQkgg-gZRBYrHbs_QHVZDeY:1sgSo2:9gyJy7ewZZOp-oLBP4m5dnmJZ3qGaonxZP1772Ml1Hk",
+        "expire_date": "2024-09-03T17:38:06.156Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "qvustcmtp5ctaxgcpwufsvpblilhy5hc",
+    "fields": {
+        "session_data": ".eJxVjMEOwiAQRP-FsyELbUE8evcbyMLuStXQpLQn47_bJj1oMqd5b-atIq5LiWvjOY6kLsqr02-XMD-57oAeWO-TzlNd5jHpXdEHbfo2Eb-uh_t3ULCVbe2QxSD0YnMANgk6slYSg3eIZshnsP3gjXPJhECByEomYN-JbDFOfb7zXThY:1sgqIz:VIG5dIR66JUAWj_ngLWnphCrneur6OaOkdnJx5Jg1ME",
+        "expire_date": "2024-09-04T18:43:37.116Z"
+    }
+},
+{
+    "model": "course.user",
+    "pk": 1,
+    "fields": {
+        "password": "pbkdf2_sha256$390000$gkpAL1ekVOCJgy3BTdlzqm$baUmpDHUcBlBgNdtKEwxkaCWQSIJmINBZCkRTdhqN+E=",
+        "last_login": "2024-08-21T15:26:35.004Z",
+        "is_superuser": true,
+        "first_name": "",
+        "last_name": "",
+        "email": "admin@gmail.com",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2024-08-20T17:33:20.467Z",
+        "username": "admin",
+        "groups": [],
+        "user_permissions": [],
+        "finished_lessons": []
+    }
+},
+{
+    "model": "course.user",
+    "pk": 2,
+    "fields": {
+        "password": "pbkdf2_sha256$390000$M9cuUILnqrGbpbtxWZmQDd$WmIczyESlqK/cSXNYKPNobJ0Ke1NzTct1RY0XU83SR0=",
+        "last_login": "2024-08-21T14:57:37.330Z",
+        "is_superuser": false,
+        "first_name": "Alex",
+        "last_name": "Black",
+        "email": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2024-08-20T17:38:05.841Z",
+        "username": "Alex123",
+        "groups": [],
+        "user_permissions": [],
+        "finished_lessons": []
+    }
+},
+{
+    "model": "course.user",
+    "pk": 3,
+    "fields": {
+        "password": "pbkdf2_sha256$390000$w6rmE1Tjt3p0BJdQY10kR4$ge+768M0YLOBnTAJnVorfQ6j+m7r3iBWTL22a3clC4g=",
+        "last_login": "2024-08-21T13:21:58.163Z",
+        "is_superuser": false,
+        "first_name": "Donald",
+        "last_name": "Pramp",
+        "email": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2024-08-21T13:21:57.785Z",
+        "username": "CaptureMaster0",
+        "groups": [],
+        "user_permissions": [],
+        "finished_lessons": []
+    }
+},
+{
+    "model": "course.user",
+    "pk": 4,
+    "fields": {
+        "password": "pbkdf2_sha256$390000$DUvezcXlnYOBDmO6gfptPK$waByv9uC0pp2SborSXTdUvk5FD55tYw0hA7WVdoJ6jA=",
+        "last_login": "2024-08-21T13:50:49.395Z",
+        "is_superuser": false,
+        "first_name": "Andrew",
+        "last_name": "Tate",
+        "email": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2024-08-21T13:50:49.171Z",
+        "username": "GuruOfTime2008",
+        "groups": [],
+        "user_permissions": [],
+        "finished_lessons": []
+    }
+},
+{
+    "model": "course.user",
+    "pk": 5,
+    "fields": {
+        "password": "pbkdf2_sha256$390000$t0HfoRvKxWw7kjGdZieC7Y$R7sETRClNXmTOTe3l1HF3h8waiPvwTcQi0e7UT+Nmf8=",
+        "last_login": "2024-08-21T14:50:52.229Z",
+        "is_superuser": false,
+        "first_name": "Taras",
+        "last_name": "Franko",
+        "email": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2024-08-21T14:27:15.562Z",
+        "username": "TutoR28",
+        "groups": [],
+        "user_permissions": [],
+        "finished_lessons": []
+    }
+},
+{
+    "model": "course.user",
+    "pk": 6,
+    "fields": {
+        "password": "pbkdf2_sha256$390000$k0pkK9jkN140Iw7S4CsZ9o$B5iDuZ88W3ibgPXmKHpz5naflbrbdsve7STGbOH6JNc=",
+        "last_login": "2024-08-21T14:52:08.603Z",
+        "is_superuser": false,
+        "first_name": "Mike",
+        "last_name": "Tison",
+        "email": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2024-08-21T14:52:08.408Z",
+        "username": "FitCoachMike",
+        "groups": [],
+        "user_permissions": [],
+        "finished_lessons": []
+    }
+},
+{
+    "model": "course.user",
+    "pk": 7,
+    "fields": {
+        "password": "pbkdf2_sha256$390000$tvVfF27M9nlKH2Bnuc9LME$0GG8BBvvrXpR8bQ5CGuHaK25GLjM1fTdqgCZIdv3bLQ=",
+        "last_login": "2024-08-21T18:43:37.100Z",
+        "is_superuser": false,
+        "first_name": "Hordon",
+        "last_name": "Ramsay",
+        "email": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2024-08-21T15:27:44.214Z",
+        "username": "HordonRamsay",
+        "groups": [],
+        "user_permissions": [],
+        "finished_lessons": []
+    }
+},
+{
+    "model": "course.course",
+    "pk": 1,
+    "fields": {
+        "name": "Cybersecurity Fundamentals",
+        "description": "This course provides an introduction to the essential concepts in cybersecurity. You'll learn about the common threats to digital security, how to protect personal and professional data, and the best practices to maintain security online.",
+        "created_at": "2024-08-20T18:22:55.918Z",
+        "created_by": 2
+    }
+},
+{
+    "model": "course.course",
+    "pk": 2,
+    "fields": {
+        "name": "UI/UX Design Fundamentals",
+        "description": "Master the principles of user experience (UX) and user interface (UI) design. Learn to create visually appealing and intuitive digital products that provide seamless user experiences. Perfect for aspiring designers and product developers.",
+        "created_at": "2024-08-21T13:08:46.759Z",
+        "created_by": 2
+    }
+},
+{
+    "model": "course.course",
+    "pk": 3,
+    "fields": {
+        "name": "Introduction to Machine Learning",
+        "description": "Explore the foundational concepts of Machine Learning, including key algorithms, data preprocessing, and model evaluation. This course will equip you with practical skills to start building your own machine learning models.",
+        "created_at": "2024-08-21T13:12:46.371Z",
+        "created_by": 2
+    }
+},
+{
+    "model": "course.course",
+    "pk": 4,
+    "fields": {
+        "name": "Photography Fundamentals",
+        "description": "Learn the essentials of photography, from understanding camera settings to mastering composition. This course will guide you through key techniques and concepts to help you capture stunning images, regardless of your experience level.",
+        "created_at": "2024-08-21T13:39:23.776Z",
+        "created_by": 3
+    }
+},
+{
+    "model": "course.course",
+    "pk": 5,
+    "fields": {
+        "name": "Time Management and Productivity",
+        "description": "Boost your efficiency by mastering time management techniques and productivity hacks. Learn how to prioritize tasks, set achievable goals, and eliminate distractions, ensuring that you get the most out of your day.",
+        "created_at": "2024-08-21T13:52:09.493Z",
+        "created_by": 4
+    }
+},
+{
+    "model": "course.course",
+    "pk": 6,
+    "fields": {
+        "name": "Public Speaking Skills",
+        "description": "Master the art of public speaking with this comprehensive course. Learn essential skills to engage your audience, convey your message confidently, and handle any speaking situation with ease. Perfect for beginners and professionals alike.",
+        "created_at": "2024-08-21T14:27:49.408Z",
+        "created_by": 5
+    }
+},
+{
+    "model": "course.course",
+    "pk": 7,
+    "fields": {
+        "name": "Creative Writing",
+        "description": "Unlock your creative potential with our Creative Writing course. Explore storytelling techniques, character development, and writing styles to craft compelling narratives. Ideal for both beginners and seasoned writers looking to refine their skills.",
+        "created_at": "2024-08-21T14:35:20.941Z",
+        "created_by": 5
+    }
+},
+{
+    "model": "course.course",
+    "pk": 9,
+    "fields": {
+        "name": "Fundamentals of Fitness Training",
+        "description": "Learn the core principles of fitness training, including strength, endurance, flexibility, and proper technique. This course provides practical tips and exercises for achieving your fitness goals. Ideal for beginners.",
+        "created_at": "2024-08-21T14:52:28.754Z",
+        "created_by": 6
+    }
+},
+{
+    "model": "course.course",
+    "pk": 10,
+    "fields": {
+        "name": "DevOps Fundamentals",
+        "description": "Learn the core principles of DevOps, including continuous integration, continuous delivery, and automation. This course provides a strong foundation for understanding DevOps practices and tools essential for modern software development.",
+        "created_at": "2024-08-21T15:03:53.586Z",
+        "created_by": 2
+    }
+},
+{
+    "model": "course.course",
+    "pk": 11,
+    "fields": {
+        "name": "Mastering Simple French Culinary",
+        "description": "Master the art of French side dishes with simple recipes that bring a touch of elegance to any meal. Perfect for home cooks and aspiring chefs alike.",
+        "created_at": "2024-08-21T15:28:32.966Z",
+        "created_by": 7
+    }
+},
+{
+    "model": "course.lesson",
+    "pk": 1,
+    "fields": {
+        "title": "Introduction to Cybersecurity",
+        "content": "Cybersecurity is the practice of protecting systems, networks, and programs from digital attacks. These attacks are usually aimed at accessing, changing, or destroying sensitive information, extorting money from users, or interrupting normal business processes. Understanding the basics of cybersecurity is crucial in today’s digital world, where both individuals and organizations are at risk of cyber threats.\r\n\r\nThe importance of cybersecurity has grown significantly as the number of devices and the volume of data being transmitted and stored online have increased. Whether you are using a smartphone, a computer, or a cloud service, the data you share and store must be protected. Cybersecurity involves a range of practices, from using strong passwords to installing security software and staying informed about the latest threats.",
+        "course": 1
+    }
+},
+{
+    "model": "course.lesson",
+    "pk": 2,
+    "fields": {
+        "title": "Types of Cyber Threats",
+        "content": "Cyber threats come in various forms, each designed to exploit different vulnerabilities in systems or users. The most common types of cyber threats include malware, phishing, ransomware, and social engineering. Malware refers to any software intentionally designed to cause damage to a computer, server, or network. Phishing is a technique used by attackers to trick users into revealing sensitive information such as passwords or credit card numbers, typically through deceptive emails or websites.\r\n\r\nRansomware is a type of malware that encrypts the victim's data, demanding payment to restore access. Social engineering involves manipulating individuals into divulging confidential information. Each of these threats can have severe consequences for individuals and organizations alike. Understanding these threats is the first step in defending against them.",
+        "course": 1
+    }
+},
+{
+    "model": "course.lesson",
+    "pk": 3,
+    "fields": {
+        "title": "The Importance of Strong Passwords",
+        "content": "Passwords are the first line of defense in cybersecurity, yet they are often one of the weakest points. A strong password is essential to protect your accounts from unauthorized access. Weak passwords are easily guessable, especially with the help of automated tools that can attempt thousands of combinations per second. A strong password typically includes a mix of uppercase and lowercase letters, numbers, and special characters.\r\n\r\nUsing unique passwords for different accounts is also crucial. If one account is compromised, using the same password across multiple accounts can lead to further breaches. Password managers are recommended for storing complex passwords securely, making it easier to use strong, unique passwords for all your accounts.",
+        "course": 1
+    }
+},
+{
+    "model": "course.lesson",
+    "pk": 4,
+    "fields": {
+        "title": "Two-Factor Authentication (2FA)",
+        "content": "Two-Factor Authentication (2FA) adds an extra layer of security to your accounts by requiring not only a password and username but also something that only the user has on them, i.e., a piece of information only they should know or have immediately to hand, such as a physical token. Even if your password is compromised, 2FA provides an additional barrier that makes it harder for unauthorized users to gain access to your accounts.\r\n\r\nCommon methods of 2FA include SMS-based authentication, where a code is sent to your phone, or app-based authentication, where a unique code is generated on an authenticator app. Biometric methods, such as fingerprint or facial recognition, are also becoming increasingly popular. Implementing 2FA is one of the most effective ways to secure your online accounts.",
+        "course": 1
+    }
+},
+{
+    "model": "course.lesson",
+    "pk": 5,
+    "fields": {
+        "title": "Safe Browsing Practices",
+        "content": "Browsing the internet safely is critical to protecting your personal information. Unsafe browsing practices can lead to malware infections, phishing attacks, and data breaches. Always ensure that the websites you visit are secure, which you can identify by looking for a URL that begins with \"https://\" and a padlock icon in the browser's address bar. These indicate that the site uses encryption to protect your data.\r\n\r\nAvoid clicking on suspicious links or downloading files from untrusted sources. Cybercriminals often use these methods to distribute malware or to steal personal information. Keeping your browser up to date and using reputable antivirus software can also help mitigate risks while browsing.",
+        "course": 1
+    }
+},
+{
+    "model": "course.lesson",
+    "pk": 6,
+    "fields": {
+        "title": "Securing Your Devices",
+        "content": "Your devices, including smartphones, tablets, and computers, are gateways to your personal information. Ensuring they are secure is paramount. Regularly updating your device's software is crucial, as updates often include patches for security vulnerabilities that could be exploited by cyber attackers. Installing a reliable antivirus program provides an additional layer of protection against malware.\r\n\r\nPhysical security is equally important. Ensure that your devices are locked with a strong password or biometric security like fingerprint or facial recognition. Avoid using public Wi-Fi for sensitive activities, as these networks are often unsecured, making it easier for attackers to intercept your data.",
+        "course": 1
+    }
+},
+{
+    "model": "course.lesson",
+    "pk": 7,
+    "fields": {
+        "title": "Introduction to UI/UX Design",
+        "content": "Understanding the difference between UI (User Interface) and UX (User Experience) is crucial for any designer. UI focuses on the visual elements—buttons, icons, spacing—everything users interact with. UX, on the other hand, is about the overall feel of the experience. It’s the difference between a beautifully designed door and a door that’s easy to open. Grasping this distinction will lay the foundation for your design journey.\r\n\r\nAs you start exploring this field, remember that UI and UX are interdependent. A great interface might look visually appealing, but if it’s not user-friendly, the experience will fall short. Similarly, a fantastic user experience cannot exist without a well-thought-out interface.",
+        "course": 2
+    }
+},
+{
+    "model": "course.lesson",
+    "pk": 8,
+    "fields": {
+        "title": "Principles of User-Centered Design",
+        "content": "User-centered design (UCD) is all about focusing on the user at every stage of the design process. From the initial concept to the final product, every decision should be made with the end user in mind. This approach ensures that the product not only meets users’ needs but also delights them. Key principles include understanding your audience, empathizing with their problems, and designing solutions that are intuitive and easy to use.\r\n\r\nIn practice, UCD involves continuous user research, iterative testing, and refining the design based on feedback. It’s a cycle that keeps the user at the heart of the design process, leading to products that are not only functional but also enjoyable to use.",
+        "course": 2
+    }
+},
+{
+    "model": "course.lesson",
+    "pk": 9,
+    "fields": {
+        "title": "Wireframing and Prototyping",
+        "content": "Wireframes are the blueprints of your design, providing a basic visual guide for the layout and structure of your interface. They’re essential for organizing content and ensuring that each element has a clear purpose. Wireframes help you plan the functionality of your design without getting distracted by colors or images.\r\n\r\nPrototyping takes this a step further by adding interactive elements, allowing you to test the functionality of your design before it’s built. Prototypes are crucial for validating your ideas with stakeholders and users, offering an early glimpse into how the final product will work. Both wireframes and prototypes are iterative, meaning they evolve as feedback is gathered.",
+        "course": 2
+    }
+},
+{
+    "model": "course.lesson",
+    "pk": 10,
+    "fields": {
+        "title": "Visual Design and Color Theory",
+        "content": "Visual design is where your creativity comes to life. It involves everything from typography and color to images and icons. The goal is to create an interface that’s not only aesthetically pleasing but also functional and easy to use. Color theory plays a significant role in this, as colors can influence mood, perception, and usability.\r\n\r\nUnderstanding color psychology helps you make informed decisions about your palette, ensuring that your design conveys the right emotions and improves user interaction. Additionally, consistency in visual design elements creates a cohesive and professional look, enhancing the overall user experience.",
+        "course": 2
+    }
+},
+{
+    "model": "course.lesson",
+    "pk": 11,
+    "fields": {
+        "title": "Interaction Design",
+        "content": "Interaction design focuses on creating engaging interfaces with well-thought-out behaviors. It’s about making sure every click, swipe, and tap provides a seamless and intuitive experience. Key concepts include feedback (ensuring users know what action they’ve taken), consistency (maintaining uniform design patterns), and affordance (designing elements that suggest their function).\r\n\r\nGood interaction design reduces the cognitive load on users, making it easier for them to achieve their goals without confusion or frustration. It’s where design meets psychology, and understanding human behavior is key to creating intuitive interactions.",
+        "course": 2
+    }
+},
+{
+    "model": "course.lesson",
+    "pk": 12,
+    "fields": {
+        "title": "Usability Testing",
+        "content": "Usability testing is a critical step in the design process. It involves observing real users as they interact with your design to identify any issues or areas for improvement. The goal is to ensure that the product is intuitive and meets user needs effectively. Usability tests can reveal pain points in the user journey that might not be obvious to the designer.\r\n\r\nThere are various methods of usability testing, from in-person sessions to remote tests and A/B testing. Analyzing the results helps refine the design, ensuring a better user experience. Remember, no design is perfect on the first try—usability testing is about continuous improvement.",
+        "course": 2
+    }
+},
+{
+    "model": "course.lesson",
+    "pk": 13,
+    "fields": {
+        "title": "What is Machine Learning?",
+        "content": "Machine Learning (ML) is a subset of artificial intelligence (AI) that focuses on enabling computers to learn from data and improve their performance over time without being explicitly programmed. Unlike traditional programming, where specific instructions are given to a computer, ML algorithms analyze data, recognize patterns, and make decisions with minimal human intervention.\r\n\r\nThe rise of big data and powerful computational resources has fueled the growth of ML, making it a crucial tool in various industries. From predicting customer behavior to personalizing recommendations, ML is transforming how businesses operate and interact with customers. Understanding the basics of ML is essential for anyone interested in technology and data science.",
+        "course": 3
+    }
+},
+{
+    "model": "course.lesson",
+    "pk": 14,
+    "fields": {
+        "title": "Supervised vs. Unsupervised Learning",
+        "content": "Machine Learning models can be broadly classified into two types: supervised and unsupervised learning. In supervised learning, the model is trained on a labeled dataset, where the input-output pairs are known. This approach is used for tasks like classification and regression, where the goal is to predict an outcome based on input features.\r\n\r\nOn the other hand, unsupervised learning deals with unlabeled data, where the model must find hidden patterns or relationships in the data. Common tasks in unsupervised learning include clustering and dimensionality reduction. Understanding the differences between these two learning paradigms is crucial for selecting the right approach for a given problem.",
+        "course": 3
+    }
+},
+{
+    "model": "course.lesson",
+    "pk": 15,
+    "fields": {
+        "title": "Data Preprocessing Techniques",
+        "content": "Data preprocessing is a critical step in the ML pipeline, involving the preparation and cleaning of data before feeding it into a model. This process includes handling missing values, scaling features, encoding categorical variables, and splitting the dataset into training and testing sets.\r\n\r\nEffective data preprocessing can significantly impact the performance of a machine learning model. For example, scaling features ensures that the model treats all input variables equally, preventing biases due to differing data scales. Proper data preprocessing helps improve model accuracy, reduce overfitting, and ensure robust model performance.",
+        "course": 3
+    }
+},
+{
+    "model": "course.lesson",
+    "pk": 16,
+    "fields": {
+        "title": "Linear Regression",
+        "content": "Linear regression is one of the most basic and widely used algorithms in supervised learning. It models the relationship between a dependent variable and one or more independent variables by fitting a linear equation to the observed data. The goal is to predict the output based on input features.\r\n\r\nThe simplicity and interpretability of linear regression make it a popular choice for tasks like predicting sales, housing prices, and other continuous variables. Understanding linear regression is foundational for exploring more complex models and techniques in machine learning.",
+        "course": 3
+    }
+},
+{
+    "model": "course.lesson",
+    "pk": 17,
+    "fields": {
+        "title": "Classification with Logistic Regression",
+        "content": "Logistic regression is a classification algorithm used to predict binary outcomes based on input features. Unlike linear regression, which predicts continuous values, logistic regression predicts the probability of an instance belonging to a particular class, such as yes/no or spam/not spam.\r\n\r\nThe model uses the logistic function to map the output of a linear equation to a probability value between 0 and 1. Logistic regression is widely used in applications like email filtering, medical diagnosis, and credit scoring, where binary classification is required.",
+        "course": 3
+    }
+},
+{
+    "model": "course.lesson",
+    "pk": 18,
+    "fields": {
+        "title": "Support Vector Machines (SVM)",
+        "content": "Support Vector Machines (SVM) are powerful supervised learning models used for both classification and regression tasks. SVMs work by finding the hyperplane that best separates different classes in the data, maximizing the margin between them. This makes SVMs particularly effective for high-dimensional data.\r\n\r\nThe flexibility of SVMs allows them to handle both linear and non-linear classification tasks through the use of kernel functions. SVMs are commonly used in text classification, image recognition, and bioinformatics due to their ability to handle complex and noisy datasets.",
+        "course": 3
+    }
+},
+{
+    "model": "course.lesson",
+    "pk": 19,
+    "fields": {
+        "title": "Neural Networks and Deep Learning",
+        "content": "Neural networks are a class of models inspired by the human brain, consisting of interconnected nodes (neurons) arranged in layers. These models are the foundation of deep learning, where multiple hidden layers are used to learn complex patterns in data. Neural networks are particularly effective for tasks like image and speech recognition, natural language processing, and game playing.\r\n\r\nDeep learning has revolutionized the field of artificial intelligence, enabling breakthroughs in areas like self-driving cars, medical diagnosis, and language translation. Understanding the basics of neural networks and deep learning is essential for anyone looking to advance in the field of machine learning.",
+        "course": 3
+    }
+},
+{
+    "model": "course.lesson",
+    "pk": 20,
+    "fields": {
+        "title": "Model Evaluation and Hyperparameter Tuning",
+        "content": "Evaluating the performance of a machine learning model is crucial to understanding its effectiveness. Common evaluation metrics include accuracy, precision, recall, and F1-score for classification tasks, and mean squared error (MSE) for regression tasks. It is important to choose the right metric based on the problem at hand.\r\n\r\nHyperparameter tuning involves adjusting the parameters of a model to optimize its performance. Techniques like grid search and random search are commonly used to find the best combination of hyperparameters. Understanding how to evaluate and tune models is key to building robust and reliable machine learning systems.",
+        "course": 3
+    }
+},
+{
+    "model": "course.lesson",
+    "pk": 21,
+    "fields": {
+        "title": "Lesson 1: Introduction to Photography",
+        "content": "Photography is more than just pointing a camera and pressing the shutter. It’s about capturing moments, emotions, and stories. Understanding the basic concepts of photography will set the foundation for your journey into this art form. You’ll explore what makes a photograph impactful and how to approach your subjects creatively.\r\n\r\nPhotography combines technical skills and artistic vision. As you learn the basics, you'll develop a unique style that reflects your perspective. This lesson covers the essentials you need to start your photography journey, including an overview of the camera's components, types of photography, and setting goals for your growth.",
+        "course": 4
+    }
+},
+{
+    "model": "course.lesson",
+    "pk": 22,
+    "fields": {
+        "title": "Lesson 2: Understanding Exposure",
+        "content": "Exposure is a fundamental aspect of photography that determines how light or dark an image appears. It’s controlled by three main elements: aperture, shutter speed, and ISO. Understanding how these elements interact is crucial for capturing well-exposed photos in any lighting condition.\r\n\r\nAperture affects depth of field, shutter speed influences motion blur, and ISO adjusts the camera’s sensitivity to light. Mastering these settings allows you to manipulate light to achieve the desired effect in your images. This lesson delves into how to balance these elements for various photography scenarios.",
+        "course": 4
+    }
+},
+{
+    "model": "course.lesson",
+    "pk": 23,
+    "fields": {
+        "title": "Lesson 3: Mastering Composition",
+        "content": "Composition refers to the arrangement of elements within a photo. Good composition can transform an ordinary scene into an extraordinary image by guiding the viewer's eye and creating a sense of balance and harmony. The rule of thirds, leading lines, and framing are some of the key techniques to improve your compositions.\r\n\r\nLearning to see and think in terms of composition will enhance your ability to tell a story through your photos. This lesson focuses on different compositional techniques and how to apply them in various situations to make your photos more engaging and visually appealing.",
+        "course": 4
+    }
+},
+{
+    "model": "course.lesson",
+    "pk": 24,
+    "fields": {
+        "title": "Lesson 4: Lighting Techniques",
+        "content": "Lighting is one of the most critical factors in photography. The quality, direction, and color of light can drastically change the mood and impact of a photograph. Natural light is versatile but challenging to master, while artificial lighting offers control and consistency.\r\n\r\nIn this lesson, you’ll learn how to work with different lighting conditions, whether shooting outdoors under natural light or indoors with artificial light sources. You’ll also explore the use of shadows and reflections to add depth and drama to your images.",
+        "course": 4
+    }
+},
+{
+    "model": "course.lesson",
+    "pk": 25,
+    "fields": {
+        "title": "Lesson 5: Portrait Photography",
+        "content": "Portrait photography is about capturing the essence of a person. It requires a good understanding of how to use light, pose, and composition to highlight your subject's personality. This lesson covers techniques for taking compelling portraits, whether candid or posed.\r\n\r\nIn addition to technical skills, engaging with your subject to make them comfortable is essential in portrait photography. You'll learn tips for directing poses and expressions, choosing the right background, and using props to enhance the portrait’s storytelling aspect.",
+        "course": 4
+    }
+},
+{
+    "model": "course.lesson",
+    "pk": 26,
+    "fields": {
+        "title": "Lesson 6: Landscape Photography",
+        "content": "Landscape photography captures the beauty of the natural world, from sweeping vistas to intricate details. Patience and planning are key to finding the perfect location and timing for your shots. This lesson teaches you how to use composition, lighting, and camera settings to create stunning landscape photos.\r\n\r\nUnderstanding how to use wide-angle lenses, long exposures, and neutral density filters will help you capture the grandeur of landscapes. You’ll also learn about the importance of weather conditions, scouting locations, and the best times of day to shoot.",
+        "course": 4
+    }
+},
+{
+    "model": "course.lesson",
+    "pk": 27,
+    "fields": {
+        "title": "Lesson 7: Post-Processing Basics",
+        "content": "Post-processing is the final step in creating a great photograph. While it’s important to get the shot right in-camera, editing can enhance your images, correct mistakes, and bring your artistic vision to life. This lesson introduces basic post-processing techniques using software like Adobe Lightroom and Photoshop.\r\n\r\nYou’ll learn how to adjust exposure, color balance, contrast, and sharpness to improve your photos. Additionally, this lesson covers more advanced techniques like cropping, retouching, and applying filters to achieve the desired look and feel in your images.",
+        "course": 4
+    }
+},
+{
+    "model": "course.lesson",
+    "pk": 28,
+    "fields": {
+        "title": "Understanding Time Management",
+        "content": "Effective time management starts with understanding how you currently spend your time. This lesson will help you identify time-wasting habits and the impact they have on your productivity. By analyzing your daily routines, you’ll uncover opportunities to optimize how you manage your time.\r\n\r\nTime management is not about being busy but being productive. You’ll explore the difference between urgent and important tasks, and learn how to prioritize effectively. The insights gained here will form the foundation for improving your productivity.",
+        "course": 5
+    }
+},
+{
+    "model": "course.lesson",
+    "pk": 29,
+    "fields": {
+        "title": "Setting SMART Goals",
+        "content": "SMART goals—Specific, Measurable, Achievable, Relevant, and Time-bound—are essential for directing your efforts towards meaningful achievements. This lesson covers how to set SMART goals that align with your personal and professional aspirations.\r\n\r\nBy setting clear and realistic goals, you’ll have a roadmap to guide your actions. This lesson will also discuss the importance of breaking down larger goals into manageable tasks, ensuring that you stay motivated and on track to achieving your objectives.",
+        "course": 5
+    }
+},
+{
+    "model": "course.lesson",
+    "pk": 30,
+    "fields": {
+        "title": "Prioritization Techniques",
+        "content": "With a never-ending to-do list, it’s easy to feel overwhelmed. Prioritization techniques like the Eisenhower Matrix can help you focus on what truly matters. This lesson introduces you to different methods for organizing and tackling your tasks effectively.\r\n\r\nYou’ll learn how to differentiate between tasks that are urgent and those that are important, and how to allocate your time accordingly. By mastering prioritization, you can ensure that your most critical tasks are completed first, leading to more productive days.",
+        "course": 5
+    }
+},
+{
+    "model": "course.lesson",
+    "pk": 31,
+    "fields": {
+        "title": "Overcoming Procrastination",
+        "content": "Procrastination is one of the biggest barriers to productivity. This lesson delves into the psychology behind procrastination and provides strategies to overcome it. You’ll explore techniques such as the Pomodoro Technique, time blocking, and self-imposed deadlines to combat procrastination.\r\n\r\nUnderstanding why you procrastinate is key to overcoming it. By identifying your triggers and implementing practical solutions, you can reduce procrastination and increase your efficiency, allowing you to achieve more in less time.",
+        "course": 5
+    }
+},
+{
+    "model": "course.lesson",
+    "pk": 32,
+    "fields": {
+        "title": "Managing Distractions",
+        "content": "In today’s digital world, distractions are everywhere. This lesson will teach you how to manage and minimize distractions, whether they come from your environment, technology, or your own thoughts. Techniques like mindfulness and creating a focused workspace are explored.\r\n\r\nYou’ll also learn about the importance of setting boundaries and scheduling breaks to maintain focus. By controlling your environment and habits, you can significantly improve your concentration and productivity throughout the day.",
+        "course": 5
+    }
+},
+{
+    "model": "course.lesson",
+    "pk": 33,
+    "fields": {
+        "title": "The Power of Routine",
+        "content": "A well-structured routine can enhance your productivity by providing consistency and predictability in your day. This lesson discusses the benefits of establishing a daily routine and how to design one that fits your lifestyle and goals.\r\n\r\nRoutines reduce decision fatigue by automating parts of your day, allowing you to focus on more important tasks. You’ll also learn about the importance of morning and evening routines, which can set the tone for a productive day and help you unwind and reflect at the end.",
+        "course": 5
+    }
+},
+{
+    "model": "course.lesson",
+    "pk": 34,
+    "fields": {
+        "title": "Delegation and Outsourcing",
+        "content": "Trying to do everything yourself can lead to burnout. This lesson covers the importance of delegation and outsourcing as key productivity strategies. By identifying tasks that can be delegated, you free up time for higher-priority activities.\r\n\r\nLearning to trust others and leveraging their strengths can enhance both your productivity and that of your team. This lesson also explores the tools and platforms available for effective outsourcing, helping you to manage your workload more efficiently.",
+        "course": 5
+    }
+},
+{
+    "model": "course.lesson",
+    "pk": 35,
+    "fields": {
+        "title": "Review and Reflect",
+        "content": "Regularly reviewing and reflecting on your progress is crucial for continuous improvement in time management and productivity. This lesson provides a framework for assessing what’s working, what’s not, and how to adjust your strategies moving forward.\r\n\r\nReflection helps you celebrate your successes and learn from your challenges. By making time to review your goals, habits, and routines, you can make informed decisions that drive ongoing growth and productivity.",
+        "course": 5
+    }
+},
+{
+    "model": "course.lesson",
+    "pk": 36,
+    "fields": {
+        "title": "Lesson 1: Introduction to Public Speaking",
+        "content": "Public speaking is a critical skill that can elevate your career and personal life. It involves more than just talking in front of a group; it's about connecting with your audience, delivering your message clearly, and leaving a lasting impact. Whether you're speaking to a small team or a large audience, the principles of effective communication remain the same.\r\n\r\nIn this lesson, we will explore the fundamentals of public speaking, including understanding your audience, structuring your speech, and managing nerves. By the end of this lesson, you'll have a solid foundation to build upon as you progress through the course.",
+        "course": 6
+    }
+},
+{
+    "model": "course.lesson",
+    "pk": 37,
+    "fields": {
+        "title": "Lesson 2: Overcoming Stage Fright",
+        "content": "Stage fright is one of the most common fears associated with public speaking. It can manifest as anxiety, nervousness, or even physical symptoms like sweating and shaking. However, with the right techniques, you can manage and overcome this fear.\r\n\r\nThis lesson will cover practical strategies for reducing anxiety before and during your speech. From breathing exercises to visualization techniques, you'll learn how to control your nerves and present with confidence. Remember, even the most experienced speakers started with some level of fear; the key is to not let it control you.",
+        "course": 6
+    }
+},
+{
+    "model": "course.lesson",
+    "pk": 38,
+    "fields": {
+        "title": "Lesson 3: Crafting Your Speech",
+        "content": "A well-structured speech is the backbone of effective public speaking. Without a clear structure, your audience may become lost or disengaged. In this lesson, we will discuss how to craft a speech that is both engaging and easy to follow.\r\n\r\nWe'll cover the essential components of a speech, including the introduction, body, and conclusion. You'll learn how to create a compelling opening, organize your main points, and leave your audience with a memorable closing. By the end of this lesson, you'll be equipped to craft speeches that resonate with your audience.",
+        "course": 6
+    }
+},
+{
+    "model": "course.lesson",
+    "pk": 39,
+    "fields": {
+        "title": "Lesson 4: Engaging Your Audience",
+        "content": "Engagement is key to keeping your audience's attention throughout your speech. It's not just about what you say, but how you say it. This lesson will focus on techniques to engage your audience, such as using body language, eye contact, and vocal variety.\r\n\r\nYou'll also learn how to ask questions, tell stories, and use humor to keep your audience interested. The goal is to make your speech interactive and dynamic, ensuring that your audience stays focused and involved from start to finish.",
+        "course": 6
+    }
+},
+{
+    "model": "course.lesson",
+    "pk": 40,
+    "fields": {
+        "title": "Lesson 5: Using Visual Aids Effectively",
+        "content": "Visual aids can enhance your speech by reinforcing your message and making complex information easier to understand. However, they should complement your speech, not distract from it. In this lesson, you'll learn how to use visual aids effectively.\r\n\r\nWe'll discuss different types of visual aids, such as slides, charts, and props, and how to integrate them seamlessly into your presentation. You'll also learn best practices for designing slides that are visually appealing and easy to read. By the end of this lesson, you'll know how to use visual aids to support and enhance your speech.",
+        "course": 6
+    }
+},
+{
+    "model": "course.lesson",
+    "pk": 41,
+    "fields": {
+        "title": "Lesson 6: Handling Q&A Sessions",
+        "content": "Q&A sessions can be one of the most challenging aspects of public speaking, as they require you to think on your feet and respond to unexpected questions. This lesson will teach you how to handle Q&A sessions with confidence and poise.\r\n\r\nYou'll learn techniques for listening carefully to questions, responding thoughtfully, and managing difficult or hostile questions. We'll also discuss how to stay in control of the session and ensure that it remains productive and respectful. By the end of this lesson, you'll feel more prepared to handle any question that comes your way.",
+        "course": 6
+    }
+},
+{
+    "model": "course.lesson",
+    "pk": 42,
+    "fields": {
+        "title": "Lesson 7: Practicing Your Speech",
+        "content": "Practice is essential to becoming a confident and effective speaker. In this lesson, we will explore different methods for practicing your speech, from rehearsing in front of a mirror to recording yourself and seeking feedback from others.\r\n\r\nYou'll learn how to identify areas for improvement and make adjustments to your delivery, timing, and content. We'll also discuss the importance of practicing under realistic conditions, such as simulating the environment where you'll be speaking. With regular practice, you'll be able to deliver your speech with confidence and ease.",
+        "course": 6
+    }
+},
+{
+    "model": "course.lesson",
+    "pk": 43,
+    "fields": {
+        "title": "Lesson 8: Delivering Your Speech",
+        "content": "Delivery is where all your preparation comes together. In this lesson, we'll cover the final steps before you take the stage, including how to calm your nerves, project confidence, and connect with your audience.\r\n\r\nYou'll learn tips for maintaining good posture, speaking clearly, and using pauses effectively. We'll also discuss how to adapt your delivery based on the audience's reactions and how to recover if you make a mistake. By the end of this lesson, you'll be ready to deliver your speech with poise and professionalism.",
+        "course": 6
+    }
+},
+{
+    "model": "course.lesson",
+    "pk": 44,
+    "fields": {
+        "title": "Lesson 9: Analyzing Your Performance",
+        "content": "After delivering your speech, it's important to reflect on your performance and identify areas for improvement. This lesson will guide you through the process of analyzing your speech, including reviewing feedback, assessing your delivery, and identifying strengths and weaknesses.\r\n\r\nYou'll learn how to use this analysis to improve future speeches and continue developing your public speaking skills. Remember, becoming a great speaker is a journey, and each speech is an opportunity to learn and grow.",
+        "course": 6
+    }
+},
+{
+    "model": "course.lesson",
+    "pk": 45,
+    "fields": {
+        "title": "Lesson 10: Continuing to Improve",
+        "content": "Public speaking is a skill that requires ongoing practice and refinement. In this final lesson, we'll discuss ways to continue improving your public speaking skills beyond this course.\r\n\r\nWe'll explore opportunities for practice, such as joining public speaking clubs, attending workshops, and seeking out speaking opportunities in your personal and professional life. You'll also learn how to set goals for your continued development and track your progress over time. By the end of this course, you'll be equipped with the tools and knowledge to continue your public speaking journey.",
+        "course": 6
+    }
+},
+{
+    "model": "course.lesson",
+    "pk": 46,
+    "fields": {
+        "title": "Lesson 1: Introduction to Creative Writing",
+        "content": "Creative writing is all about using your imagination to tell stories, express ideas, and explore emotions. It goes beyond factual writing and allows you to experiment with language, form, and style. Whether you're writing fiction, poetry, or creative non-fiction, the goal is to connect with your readers on an emotional level.\r\n\r\nIn this lesson, we'll introduce the fundamentals of creative writing. You'll learn about different genres, the importance of finding your voice, and how to overcome writer's block. By the end of this lesson, you'll be ready to start your creative writing journey with confidence.",
+        "course": 7
+    }
+},
+{
+    "model": "course.lesson",
+    "pk": 47,
+    "fields": {
+        "title": "Lesson 2: Crafting Compelling Characters",
+        "content": "Characters are the heart of any story. Whether they're heroes or villains, they drive the plot and engage the reader's emotions. In this lesson, we'll explore how to create memorable and believable characters that resonate with your audience.\r\n\r\nYou'll learn how to develop character traits, motivations, and backstories. We'll also discuss how to write dialogue that feels authentic and reveals more about your characters. By the end of this lesson, you'll have the tools to bring your characters to life on the page.",
+        "course": 7
+    }
+},
+{
+    "model": "course.lesson",
+    "pk": 48,
+    "fields": {
+        "title": "Lesson 3: Building a Strong Plot",
+        "content": "A well-structured plot keeps your readers engaged from beginning to end. It's the framework that guides your story and gives it purpose. In this lesson, we'll discuss how to build a strong plot that captures your readers' attention and keeps them hooked.\r\n\r\nWe'll cover different plot structures, including the classic three-act structure, and how to create tension and conflict. You'll also learn how to craft a satisfying resolution that leaves your readers thinking long after they've finished your story. By the end of this lesson, you'll be able to plot stories that are both compelling and cohesive.",
+        "course": 7
+    }
+},
+{
+    "model": "course.lesson",
+    "pk": 49,
+    "fields": {
+        "title": "Lesson 4: Setting the Scene",
+        "content": "Setting is more than just a backdrop for your story; it can influence the mood, tone, and even the plot. In this lesson, we'll explore how to create vivid and immersive settings that draw your readers into your story.\r\n\r\nYou'll learn how to use descriptive language to paint a picture of your world, whether it's a bustling city, a quiet countryside, or a fantastical realm. We'll also discuss how setting can reflect your characters' emotions and influence their actions. By the end of this lesson, you'll be able to create settings that enhance your story and engage your readers.",
+        "course": 7
+    }
+},
+{
+    "model": "course.lesson",
+    "pk": 50,
+    "fields": {
+        "title": "Lesson 5: Writing Dialogue That Flows",
+        "content": "Dialogue is a powerful tool for revealing character, advancing the plot, and adding realism to your story. However, writing natural-sounding dialogue can be challenging. In this lesson, we'll focus on how to write dialogue that flows and feels authentic.\r\n\r\nYou'll learn techniques for avoiding common dialogue pitfalls, such as unnecessary small talk and info-dumping. We'll also discuss how to use subtext, pacing, and tone to make your dialogue more dynamic and engaging. By the end of this lesson, you'll be able to write dialogue that enhances your story and feels true to life.",
+        "course": 7
+    }
+},
+{
+    "model": "course.lesson",
+    "pk": 51,
+    "fields": {
+        "title": "Lesson 6: Exploring Different Writing Styles",
+        "content": "Every writer has a unique style, but it can be helpful to experiment with different approaches to find what works best for you. In this lesson, we'll explore various writing styles, from minimalist prose to lyrical language, and how to adapt your style to different genres and stories.\r\n\r\nYou'll learn how to develop your own voice and experiment with different narrative techniques, such as first-person and third-person perspectives. We'll also discuss how to balance showing versus telling in your writing. By the end of this lesson, you'll have a better understanding of your writing style and how to use it effectively.",
+        "course": 7
+    }
+},
+{
+    "model": "course.lesson",
+    "pk": 52,
+    "fields": {
+        "title": "Lesson 7: Revising and Editing Your Work",
+        "content": "Writing is rewriting. The first draft is just the beginning; revision is where the magic happens. In this lesson, we'll cover the revision process, from self-editing to seeking feedback from others.\r\n\r\nYou'll learn how to identify and fix common issues in your writing, such as plot holes, weak character development, and awkward phrasing. We'll also discuss the importance of polishing your work to ensure it's the best it can be before sharing it with others. By the end of this lesson, you'll be equipped with the skills to revise your work effectively.",
+        "course": 7
+    }
+},
+{
+    "model": "course.lesson",
+    "pk": 53,
+    "fields": {
+        "title": "Lesson 8: Writing for Different Genres",
+        "content": "Creative writing spans a wide range of genres, from science fiction and fantasy to romance and literary fiction. In this lesson, we'll explore the unique challenges and opportunities of writing in different genres.\r\n\r\nYou'll learn how to adapt your writing style, tone, and structure to fit the conventions of various genres. We'll also discuss how to blend genres and create something entirely new. By the end of this lesson, you'll have the confidence to experiment with different genres and find your niche as a writer.",
+        "course": 7
+    }
+},
+{
+    "model": "course.lesson",
+    "pk": 54,
+    "fields": {
+        "title": "Lesson 9: Finding Inspiration",
+        "content": "Inspiration can strike at any time, but sometimes it needs a little encouragement. In this lesson, we'll explore ways to find inspiration for your writing, whether it's from your own experiences, the world around you, or other works of art.\r\n\r\nYou'll learn techniques for brainstorming, freewriting, and keeping a writer's journal. We'll also discuss how to overcome creative blocks and stay motivated. By the end of this lesson, you'll have a toolkit of strategies to keep your creative juices flowing.",
+        "course": 7
+    }
+},
+{
+    "model": "course.lesson",
+    "pk": 55,
+    "fields": {
+        "title": "Lesson 10: Sharing Your Work",
+        "content": "Writing is often a solitary activity, but sharing your work with others can be incredibly rewarding. In this final lesson, we'll discuss the different ways you can share your creative writing, whether it's through publishing, workshops, or online communities.\r\n\r\nYou'll learn how to find opportunities to share your work and how to handle feedback, both positive and negative. We'll also discuss the importance of building a writing community and supporting other writers. By the end of this course, you'll be ready to share your creative writing with the world.",
+        "course": 7
+    }
+},
+{
+    "model": "course.lesson",
+    "pk": 57,
+    "fields": {
+        "title": "Lesson 1: Introduction to Fitness",
+        "content": "Fitness is a key component of a healthy lifestyle, contributing to both physical and mental well-being. Regular exercise helps control weight, reduce the risk of chronic diseases, and improve mood and mental health. Whether you're looking to build strength, enhance endurance, or simply stay active, understanding the fundamentals of fitness is essential.\r\n\r\nStarting a fitness journey can seem daunting, but it doesn’t have to be. Begin with small, manageable goals and gradually increase the intensity and variety of your workouts. Remember, consistency is more important than intensity at the start. Your body needs time to adapt to new routines, so listen to it and progress at a comfortable pace.\r\n\r\nExercises:\r\n1. Goal Setting Exercise: Write down three specific, achievable fitness goals you want to accomplish in the next three months.\r\n2. Daily Activity Log: Keep a daily log of your physical activities, no matter how small, to track your progress over time.",
+        "course": 9
+    }
+},
+{
+    "model": "course.lesson",
+    "pk": 58,
+    "fields": {
+        "title": "Lesson 2: Strength Training Basics",
+        "content": "Strength training is a crucial element of fitness, helping to build muscle mass, increase bone density, and improve metabolic rate. Whether using free weights, machines, or body weight, the key is to focus on proper form to avoid injury and maximize results.\r\n\r\nStart with exercises that target the major muscle groups: legs, back, chest, and core. For beginners, it's important to use lighter weights and perform more repetitions to master the movements before increasing the load. Compound exercises like squats, deadlifts, and push-ups are excellent for building overall strength.\r\n\r\nExercises:\r\n1. Basic Strength Routine: Perform 3 sets of 10-12 reps each of squats, push-ups, and bent-over rows.\r\n2. Form Check: Practice each exercise in front of a mirror or with a partner to ensure proper form.",
+        "course": 9
+    }
+},
+{
+    "model": "course.lesson",
+    "pk": 59,
+    "fields": {
+        "title": "Lesson 3: Cardiovascular Endurance",
+        "content": "Cardiovascular endurance is the ability of the heart and lungs to supply oxygen to the body during sustained physical activity. Improving your cardio endurance helps increase energy levels, burn calories, and reduce the risk of heart disease.\r\n\r\nActivities like running, cycling, swimming, or brisk walking are effective ways to improve cardio endurance. Interval training, which alternates between high and low intensity, can also be a powerful method to boost cardiovascular fitness in a shorter amount of time.\r\n\r\nExercises:\r\n1. Interval Training Routine: Start with 30 seconds of high-intensity exercise (like sprinting), followed by 1 minute of low-intensity exercise (like walking), and repeat for 15-20 minutes.\r\n2. Endurance Challenge: Pick an aerobic activity and aim to sustain it for 30 minutes without stopping. Track your heart rate and perceived exertion.",
+        "course": 9
+    }
+},
+{
+    "model": "course.lesson",
+    "pk": 60,
+    "fields": {
+        "title": "Lesson 4: Flexibility and Mobility",
+        "content": "Flexibility and mobility are often overlooked in fitness but are essential for overall health and injury prevention. Flexibility refers to the range of motion in a joint or group of joints, while mobility focuses on the ability to move freely and easily.\r\n\r\nIncorporating stretching and mobility exercises into your routine can help improve posture, reduce muscle tension, and enhance performance in other areas of fitness. Dynamic stretches are ideal before a workout to prepare the muscles, while static stretches are best for cool-downs to increase flexibility.\r\n\r\nExercises:\r\n1. Dynamic Stretch Routine: Perform leg swings, arm circles, and hip rotations for 5-10 minutes before your workout.\r\n2. Static Stretch Routine: Hold stretches like hamstring stretches and shoulder stretches for 20-30 seconds after your workout.",
+        "course": 9
+    }
+},
+{
+    "model": "course.lesson",
+    "pk": 61,
+    "fields": {
+        "title": "Lesson 5: Creating a Balanced Fitness Plan",
+        "content": "A balanced fitness plan incorporates different types of workouts to address all aspects of fitness: strength, cardio, flexibility, and recovery. This holistic approach ensures that you develop well-rounded fitness and reduces the risk of burnout or injury.\r\n\r\nWhen creating your plan, consider your fitness goals, time availability, and personal preferences. A typical week might include three strength workouts, two cardio sessions, and daily stretching or mobility work. Recovery days are crucial, allowing your body to heal and adapt.\r\n\r\nExercises:\r\n1. Plan Your Week: Write out a weekly fitness schedule that includes strength, cardio, and flexibility workouts. Include at least one rest day.\r\n2. Track Progress: Use a fitness app or journal to log your workouts and monitor improvements over time.",
+        "course": 9
+    }
+},
+{
+    "model": "course.lesson",
+    "pk": 62,
+    "fields": {
+        "title": "Introduction to DevOps",
+        "content": "DevOps is a cultural and professional movement that aims to combine software development (Dev) and IT operations (Ops). It strives to improve collaboration between these traditionally siloed teams, enhancing the efficiency and quality of software delivery. The core principles of DevOps include automation, continuous feedback, and collaboration. By breaking down barriers and fostering a culture of shared responsibility, DevOps facilitates faster, more reliable software releases.\r\n\r\nKey Concepts:\r\nHistory and Evolution: Explore the origins of DevOps, from agile methodologies to modern DevOps practices. Understand how the need for faster release cycles and better quality led to the emergence of DevOps.\r\nCultural Shift: Learn about the cultural changes required to adopt DevOps, including the importance of trust, communication, and shared goals between development and operations teams.\r\nBenefits: Discover the key benefits of DevOps, such as improved deployment frequency, faster time-to-market, and reduced failure rates.",
+        "course": 10
+    }
+},
+{
+    "model": "course.lesson",
+    "pk": 63,
+    "fields": {
+        "title": "Continuous Integration and Continuous Delivery (CI/CD)",
+        "content": "Continuous Integration (CI) and Continuous Delivery (CD) are fundamental practices in DevOps that help teams automate and streamline their development workflows. CI involves regularly integrating code changes into a shared repository, where automated tests are run to ensure that new code does not introduce bugs. CD extends CI by automating the deployment process, allowing for frequent and reliable releases.\r\n\r\nKey Concepts:\r\nContinuous Integration: Understand the principles of CI, including automated testing, build automation, and version control. Learn how CI helps detect and resolve integration issues early in the development process.\r\nContinuous Delivery: Explore the practices of CD, including automated deployment pipelines, staging environments, and release strategies. Learn how CD enables rapid and reliable software releases.\r\nTools and Technologies: Gain familiarity with popular CI/CD tools like Jenkins, GitLab CI, and CircleCI. Understand how these tools can be configured to support CI/CD workflows.",
+        "course": 10
+    }
+},
+{
+    "model": "course.lesson",
+    "pk": 64,
+    "fields": {
+        "title": "Infrastructure as Code (IaC)",
+        "content": "Infrastructure as Code (IaC) is a practice that involves managing and provisioning infrastructure using code rather than manual processes. IaC allows teams to automate the setup and configuration of environments, ensuring consistency and repeatability. By defining infrastructure in code, teams can version control, test, and deploy infrastructure changes with the same practices used for application code.\r\n\r\nKey Concepts:\r\nIaC Principles: Learn about the key principles of IaC, including immutability, automation, and declarative configuration. Understand how IaC helps manage complex infrastructure setups.\r\nTools and Technologies: Explore popular IaC tools such as Terraform, Ansible, and Puppet. Understand how these tools can be used to define, provision, and manage infrastructure.\r\nBenefits: Discover the benefits of IaC, including increased consistency, faster provisioning, and easier management of infrastructure changes.",
+        "course": 10
+    }
+},
+{
+    "model": "course.lesson",
+    "pk": 65,
+    "fields": {
+        "title": "Monitoring and Logging",
+        "content": "Effective monitoring and logging are crucial for maintaining the health and performance of applications and infrastructure. Monitoring involves collecting and analyzing metrics to track the performance of systems and applications, while logging captures detailed information about system behavior, errors, and events. Together, these practices provide insights that help teams identify and resolve issues quickly.\r\n\r\nKey Concepts:\r\nMonitoring: Learn about key monitoring metrics, such as uptime, response time, and resource utilization. Explore monitoring tools like Prometheus and Grafana, which help visualize and analyze performance data.\r\nLogging: Understand the importance of logging for troubleshooting and diagnostics. Explore logging tools such as the ELK Stack (Elasticsearch, Logstash, Kibana) and their role in aggregating and analyzing log data.\r\nBest Practices: Discover best practices for setting up effective monitoring and logging, including establishing alerting thresholds, centralizing logs, and ensuring data retention.",
+        "course": 10
+    }
+},
+{
+    "model": "course.lesson",
+    "pk": 66,
+    "fields": {
+        "title": "Security in DevOps (DevSecOps)",
+        "content": "Security should be an integral part of the DevOps process, a practice known as DevSecOps. By embedding security practices into the development and deployment pipeline, teams can identify and address vulnerabilities early, reducing the risk of security breaches. DevSecOps promotes a proactive approach to security, ensuring that security is considered at every stage of the development lifecycle.\r\n\r\nKey Concepts:\r\nSecurity Integration: Learn how to integrate security practices into DevOps workflows, including automated security testing, vulnerability scanning, and code reviews.\r\nTools and Technologies: Explore security tools and technologies that support DevSecOps, such as Snyk, OWASP ZAP, and SonarQube. Understand how these tools help identify and mitigate security risks.\r\nBest Practices: Discover best practices for implementing DevSecOps, including threat modeling, secure coding practices, and regular security assessments.",
+        "course": 10
+    }
+},
+{
+    "model": "course.lesson",
+    "pk": 67,
+    "fields": {
+        "title": "Containerization and Docker",
+        "content": "Containerization is a method of packaging applications and their dependencies into containers, which are lightweight and portable. Docker is a popular tool that simplifies the process of creating, deploying, and managing containers. By using containers, teams can ensure consistent environments across development, testing, and production.\r\n\r\nKey Concepts:\r\nIntroduction to Containers: Learn the basics of containerization, including the benefits of using containers for application deployment. Understand how containers isolate applications and their dependencies.\r\nDocker Basics: Explore the core features of Docker, including Docker images, containers, and Docker Compose. Learn how to create and manage Docker containers using Docker CLI commands.\r\nBest Practices: Discover best practices for containerization, including managing container security, optimizing container performance, and using container orchestration tools.",
+        "course": 10
+    }
+},
+{
+    "model": "course.lesson",
+    "pk": 68,
+    "fields": {
+        "title": "Configuration Management",
+        "content": "Configuration Management involves managing and automating the configuration of software and systems to ensure consistency and reliability. Configuration management tools allow teams to define and maintain system configurations using code, making it easier to manage large-scale environments.\r\n\r\nKey Concepts:\r\nOverview of Configuration Management: Understand the principles of configuration management, including the need for consistency, automation, and version control.\r\nTools and Technologies: Explore popular configuration management tools like Ansible, Chef, and Puppet. Learn how these tools can be used to automate configuration tasks and manage system states.\r\nBest Practices: Discover best practices for configuration management, including defining configuration as code, maintaining configuration files in version control, and testing configurations before deployment.",
+        "course": 10
+    }
+},
+{
+    "model": "course.lesson",
+    "pk": 69,
+    "fields": {
+        "title": "Cloud Computing and DevOps",
+        "content": "Cloud computing provides scalable and flexible infrastructure that supports DevOps practices. Cloud platforms offer a range of services that integrate with DevOps tools and workflows, enabling teams to deploy and manage applications more efficiently.\r\n\r\nKey Concepts:\r\nIntroduction to Cloud Computing: Learn about cloud computing models (IaaS, PaaS, SaaS) and their relevance to DevOps. Understand the benefits of using cloud services for application deployment and management.\r\nCloud Platforms: Explore major cloud platforms like AWS, Azure, and Google Cloud. Understand how these platforms support DevOps practices with services for compute, storage, networking, and more.\r\nIntegration with DevOps: Discover how cloud services integrate with DevOps tools and workflows, including CI/CD pipelines, IaC, and monitoring.",
+        "course": 10
+    }
+},
+{
+    "model": "course.lesson",
+    "pk": 70,
+    "fields": {
+        "title": "Scaling and Load Balancing",
+        "content": "Scaling and load balancing are critical for managing the performance and availability of applications. Scaling involves adjusting resources to handle varying workloads, while load balancing distributes traffic across multiple servers to ensure even distribution and prevent bottlenecks.\r\n\r\nKey Concepts:\r\nScaling: Learn about different scaling strategies, including vertical scaling (adding resources to a single server) and horizontal scaling (adding more servers). Understand the benefits and challenges of each approach.\r\nLoad Balancing: Explore load balancing techniques and tools, including hardware and software load balancers. Learn how load balancers distribute traffic to ensure high availability and reliability.\r\nBest Practices: Discover best practices for scaling and load balancing, including monitoring performance metrics, implementing auto-scaling policies, and ensuring redundancy and failover capabilities.",
+        "course": 10
+    }
+},
+{
+    "model": "course.lesson",
+    "pk": 72,
+    "fields": {
+        "title": "Ratatouille",
+        "content": "Ratatouille is a classic French vegetable dish originating from Provence. It combines eggplant, zucchini, bell peppers, tomatoes, and herbs into a flavorful and hearty side.\r\n\r\nIngredients:\r\n- 1 eggplant\r\n- 1 zucchini\r\n- 1 bell pepper (red or yellow)\r\n- 2 tomatoes\r\n- 1 onion\r\n- 2 cloves garlic\r\n- Olive oil\r\n- Fresh basil\r\n- Salt and pepper\r\n\r\nInstructions:\r\n1. Dice the eggplant, zucchini, bell pepper, and tomatoes into uniform pieces.\r\n2. Heat olive oil in a large pan over medium heat. Saute the onion and garlic until translucent and aromatic.\r\n3. Add the diced eggplant and bell pepper to the pan. Cook for about 5-7 minutes, stirring occasionally, until the vegetables are tender.\r\n4. Stir in the zucchini and tomatoes. Reduce the heat to low and let the mixture simmer for about 20 minutes, or until all vegetables are cooked through.\r\n5. Season with salt, pepper, and fresh basil. Adjust seasoning to taste before serving.",
+        "course": 11
+    }
+},
+{
+    "model": "course.lesson",
+    "pk": 73,
+    "fields": {
+        "title": "Pommes Dauphinoise",
+        "content": "Pommes Dauphinoise, or Dauphinoise potatoes, is a rich and creamy French side dish made from thinly sliced potatoes baked with cream and cheese.\r\n\r\nIngredients:\r\n- 4 large potatoes\r\n- 2 cups heavy cream\r\n- 1 cup grated Gruyere cheese\r\n- 2 cloves garlic\r\n- Nutmeg\r\n- Salt and pepper\r\n\r\nInstructions:\r\n1. Preheat your oven to 375°F (190°C).\r\n2. Peel and thinly slice the potatoes to about 1/8-inch thickness.\r\n3. Rub a baking dish with the cut sides of a garlic clove, then butter the dish.\r\n4. Layer the potato slices in the dish, seasoning each layer with salt, pepper, and a pinch of nutmeg.\r\n5. Pour the heavy cream evenly over the potatoes, and sprinkle the grated Gruyere cheese on top.\r\n6. Cover with foil and bake for 45 minutes. Remove the foil and bake for an additional 15-20 minutes, or until the top is golden brown and the potatoes are tender.",
+        "course": 11
+    }
+},
+{
+    "model": "course.lesson",
+    "pk": 74,
+    "fields": {
+        "title": "Haricots Verts with Almonds",
+        "content": "Haricots verts, or French green beans, are sauteed with almonds for a crunchy and flavorful side dish that pairs well with any main course.\r\n\r\nIngredients:\r\n- 1 lb (450g) haricots verts (French green beans)\r\n- 1/4 cup slivered almonds\r\n- 2 tablespoons butter\r\n- 1 tablespoon olive oil\r\n- Salt and pepper\r\n\r\nInstructions:\r\n1. Trim the ends off the haricots verts and blanch in boiling water for 2-3 minutes. Drain and immediately plunge into ice water to stop cooking.\r\n2. In a large skillet, melt butter with olive oil over medium heat. Add the slivered almonds and cook, stirring frequently, until golden brown.\r\n3. Add the blanched green beans to the skillet and saute for 3-4 minutes, stirring occasionally.\r\n4. Season with salt and pepper to taste. Serve warm.",
+        "course": 11
+    }
+},
+{
+    "model": "course.lesson",
+    "pk": 75,
+    "fields": {
+        "title": "Tarte Tatin de Tomates",
+        "content": "Tarte Tatin de Tomates is an upside-down tomato tart that combines the sweetness of caramelized tomatoes with a buttery pastry crust.\r\n\r\nIngredients:\r\n- 1 sheet puff pastry\r\n- 6-8 cherry tomatoes\r\n- 1/4 cup sugar\r\n- 2 tablespoons butter\r\n- 1 tablespoon balsamic vinegar\r\n- Fresh thyme\r\n\r\nInstructions:\r\n1. Preheat your oven to 375°F (190°C).\r\n2. In an ovenproof skillet, melt butter and sugar over medium heat until it turns golden brown.\r\n3. Add the cherry tomatoes and balsamic vinegar, cooking for 5-7 minutes until the tomatoes start to soften and caramelize.\r\n4. Place the puff pastry over the tomatoes, tucking the edges down around the tomatoes.\r\n5. Bake for 25-30 minutes, or until the pastry is golden brown and puffed.\r\n6. Let the tart cool for a few minutes before inverting onto a serving plate. Garnish with fresh thyme.",
+        "course": 11
+    }
+},
+{
+    "model": "course.lesson",
+    "pk": 76,
+    "fields": {
+        "title": "Gratin de Courgettes",
+        "content": "Gratin de Courgettes is a delicious and creamy zucchini gratin, featuring a layer of tender zucchini baked with cheese and breadcrumbs.\r\n\r\nIngredients:\r\n- 4 zucchinis\r\n- 1 cup heavy cream\r\n- 1 cup grated Parmesan cheese\r\n- 1/2 cup breadcrumbs\r\n- 2 cloves garlic\r\n- 2 tablespoons butter\r\n- Salt and pepper\r\n\r\nInstructions:\r\n1. Preheat your oven to 375°F (190°C).\r\n2. Slice the zucchinis into rounds about 1/4-inch thick.\r\n3. Saute the zucchini in butter over medium heat until slightly tender, about 5 minutes.\r\n4. Arrange the zucchini in a baking dish. Season with salt and pepper.\r\n5. Mix heavy cream with minced garlic and Parmesan cheese. Pour over the zucchini.\r\n6. Sprinkle breadcrumbs evenly on top and bake for 25-30 minutes, or until golden and bubbly.",
+        "course": 11
+    }
+},
+{
+    "model": "course.lesson",
+    "pk": 77,
+    "fields": {
+        "title": "Soupe a l’Oignon (French Onion Soup)",
+        "content": "Soupe a l’Oignon is a traditional French onion soup, known for its deep, savory flavor and topped with melted cheese and crusty bread.\r\n\r\nIngredients:\r\n- 4 large onions\r\n- 4 cups beef or vegetable broth\r\n- 1/2 cup white wine\r\n- 1 tablespoon flour\r\n- 1/4 cup butter\r\n- 1 baguette\r\n- 1 cup grated Gruyere cheese\r\n- Fresh thyme\r\n\r\nInstructions:\r\n1. Slice the onions thinly. In a large pot, melt butter over medium heat. Add onions and cook slowly, stirring occasionally, until deeply caramelized, about 30-40 minutes.\r\n2. Stir in flour and cook for another 2 minutes. Add white wine and simmer until reduced by half.\r\n3. Add broth and bring to a simmer. Cook for an additional 15 minutes.\r\n4. Ladle the soup into ovenproof bowls. Top each with a slice of baguette and sprinkle with Gruyere cheese.\r\n5. Place bowls under the broiler until the cheese is melted and bubbly. Garnish with fresh thyme.",
+        "course": 11
+    }
+},
+{
+    "model": "course.lesson",
+    "pk": 78,
+    "fields": {
+        "title": "Quiche Lorraine",
+        "content": "Quiche Lorraine is a savory tart filled with a creamy custard made from eggs, cream, and bacon, perfect for a brunch or light meal.\r\n\r\nIngredients:\r\n- 1 pie crust\r\n- 6 slices bacon\r\n- 1 cup heavy cream\r\n- 3 large eggs\r\n- 1 cup grated Gruyere cheese\r\n- Salt and pepper\r\n\r\nInstructions:\r\n1. Preheat your oven to 375°F (190°C).\r\n2. Cook the bacon in a skillet until crispy, then crumble and set aside.\r\n3. Whisk together the eggs and heavy cream. Season with salt and pepper.\r\n4. Place the cooked bacon and grated Gruyere cheese into the pie crust.\r\n5. Pour the egg mixture over the bacon and cheese.\r\n6. Bake for 30-35 minutes, or until the quiche is set and the top is golden brown.",
+        "course": 11
+    }
+},
+{
+    "model": "course.lesson",
+    "pk": 79,
+    "fields": {
+        "title": "Endive Salad with Walnuts",
+        "content": "Endive salad with walnuts is a fresh and crunchy salad with a tangy vinaigrette, perfect for a light and elegant side dish.\r\n\r\nIngredients:\r\n- 2 heads of endive\r\n- 1/4 cup walnuts\r\n- 1/4 cup crumbled blue cheese\r\n- 2 tablespoons balsamic vinegar\r\n- 3 tablespoons olive oil\r\n- Salt and pepper\r\n\r\nInstructions:\r\n1. Slice the endive into bite-sized pieces. Place in a large salad bowl.\r\n2. Toast the walnuts in a dry skillet over medium heat until fragrant, then chop coarsely.\r\n3. In a small bowl, whisk together balsamic vinegar and olive oil. Season with salt and pepper.\r\n4. Toss the endive with the vinaigrette. Sprinkle with walnuts and blue cheese.\r\n5. Serve immediately for a crisp and flavorful salad.",
+        "course": 11
+    }
+},
+{
+    "model": "course.lesson",
+    "pk": 80,
+    "fields": {
+        "title": "Celery Root Remoulade",
+        "content": "Celery root remoulade is a classic French salad made with raw celery root dressed in a tangy mustard and mayonnaise sauce.\r\n\r\nIngredients:\r\n- 1 celery root\r\n- 1 cup mayonnaise\r\n- 2 tablespoons Dijon mustard\r\n- 1 tablespoon lemon juice\r\n- Salt and pepper\r\n\r\nInstructions:\r\n1. Peel the celery root and julienne into thin strips.\r\n2. In a bowl, mix together mayonnaise, Dijon mustard, and lemon juice.\r\n3. Toss the celery root strips with the dressing until well-coated.\r\n4. Season with salt and pepper. Chill in the refrigerator for at least 30 minutes before serving.",
+        "course": 11
+    }
+}
+]
