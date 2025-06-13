@@ -1,0 +1,24 @@
+{% extends "poster_base.html" %}
+
+{% block title %}Online Course Platform{% endblock %}
+
+{% block content %}
+<header>
+  
+  <div class="page-header min-vh-100" style="background-image: url(&#39;https://images.unsplash.com/photo-1520769945061-0a448c463865?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80&#39;);" loading="lazy">
+    <span class="mask bg-gradient-dark opacity-5"></span>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 col-md-7 d-flex justify-content-center flex-column">
+          <h1 class="text-white mb-4">Online course platform</h1>
+          <p class="text-white opacity-8 lead pe-5 me-5"> You can create your own course and study with other courses. Sing up to join. </p>
+          <div class="buttons">
+            <a style="color: black" href="{% url "course:login" %}" class="btn btn-white mt-4">Sing up</a>
+            <a style="color: black" href="https://github.com/SerhiiDomik/online-course-platform/tree/develop" class="btn btn-white mt-4 ms-2" target="_blank">GitHub Project</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+{% endblock %}
